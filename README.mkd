@@ -1,0 +1,7 @@
+This is a very early, rough start at making a django app that does cool stuff with the prescriptions dataset.
+
+It was written quickly with no real idea of a point, so there is a high chance it's broken or wrong in some way.
+
+Throwing it up here in the hope it turns in to something cool one day.
+
+:)
