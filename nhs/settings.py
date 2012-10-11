@@ -11,7 +11,7 @@ MANAGERS = ADMINS
 
 import dj_database_url
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost/scrip')}
+DATABASES = {'default': dj_database_url.config(default='postgis://localhost/scrip')}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -82,10 +82,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.gis',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'south',
     'prescriptions',
     'practices',
 )
