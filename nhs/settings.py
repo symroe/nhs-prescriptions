@@ -1,7 +1,11 @@
 # Django settings for nhs project.
+import ffs
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+ROOT = ffs.Path(__file__).parent
+
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -71,6 +75,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'nhs.urls'
 
 TEMPLATE_DIRS = (
+    ROOT/'templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
