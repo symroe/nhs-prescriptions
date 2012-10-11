@@ -1,10 +1,13 @@
 from django.conf.urls.defaults import *
+from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
+    url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
     # Example:
     # (r'^nhs/', include('nhs.foo.urls')),
 
