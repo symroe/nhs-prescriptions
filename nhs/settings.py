@@ -90,4 +90,5 @@ INSTALLED_APPS = (
     'south',
     'prescriptions',
     'practices',
+    'patents',
 )
