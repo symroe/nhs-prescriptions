@@ -26,7 +26,10 @@ def changes(args):
     in to a CSV file that follows the same format as the main data.
 
     Done that? then we'll begin by grouping the prescriptions by practice, by period.
+    Next, figure out what percentage of all statin prescription each item has for the period.
+    Then, detect changes to the percentage.
 
+    Then, Print a CSV of all swings of > 10%
     """
     scrips = ffs.Path(args.filename)
     grouped = collections.defaultdict(lambda:collections.defaultdict(lambda:collections.defaultdict(dict)))
