@@ -9,3 +9,4 @@ class Patent(models.Model):
                         # Stupid. But you know, they're called patent numbers.
                         # Except they have letters in them.
     number      = models.CharField(max_length=200, null=True, blank=True)
+    source      = models.CharField(max_length=200, null=True, blank=True)
