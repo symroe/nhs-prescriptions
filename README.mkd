@@ -16,20 +16,20 @@ API
 ===
 
 
-/api/drug/
+http://prescriptions.openhealthcare.org.uk/api/drug/
 
 => All drugs in the prescribing list
 
-/api/drug/?name=Rosuvastatin
+http://prescriptions.openhealthcare.org.uk/api/drug/?name=Rosuvastatin
 
 => [{name:'Rosuvastatin'...}]
 
-/api/drug/?name=Rosuvastatin,Fluvastatin
+http://prescriptions.openhealthcare.org.uk/api/drug/?name=Rosuvastatin,Fluvastatin
 
 => [{name:'Rosuvastatin'...},{name: 'Fluvastatin'...}]
 
 
-/api/drug/habits/?name=Fluvastatin
+http://prescriptions.openhealthcare.org.uk/api/drug/habits/?name=Fluvastatin
 
 => [{"code": "0212000M0", "name": "Fluvastatin Sodium", "habit": [{"total": 13668, "period": 201202}, ...]]
 
@@ -39,7 +39,7 @@ API
    return all historical aggregate data for all drugs.
 
 
-/api/practice/
+http://prescriptions.openhealthcare.org.uk/api/practice/
 
 => All practice data
 
