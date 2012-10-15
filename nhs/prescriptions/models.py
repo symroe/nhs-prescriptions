@@ -3,7 +3,6 @@ from django.db import models
 
 from practices.models import Practice
 
-# Create your models here.
 class Product(models.Model):
     bnf_code = models.CharField(blank=True, max_length=100, primary_key=True)
     name = models.CharField(blank=True, max_length=255, db_index=True)

@@ -8,6 +8,7 @@ class Practice(geo_models.Model):
     location = geo_models.PointField(spatial_index=True, geography=True, null=True)
     postcode = models.CharField(blank=True, max_length=10)
     address = models.TextField(blank=True)
-    
+
     def __unicode__(self):
         return "%s (%s)" % (self.pk, self.name)
+
