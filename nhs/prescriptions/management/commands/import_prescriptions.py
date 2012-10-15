@@ -36,6 +36,10 @@ class Command(BaseCommand):
             'actual_cost',
             'period',
         ])
+        self.product_cols = ",".join([
+                'bnf_code',
+                'name'
+            ])
 
     def copy(self):
         print self.filename
@@ -45,7 +49,19 @@ class Command(BaseCommand):
             'period' : self.period,
         }
         self.cursor.execute(sql)
-        
+
+        sql = """
+            COPY prescriptions_product (%(columns)s)
+            FROM '%(filename)s'
+            DELIMITERS ','
+            CSV;
+            COMMIT;
+        """ % {
+            'filename': self.product_filename,
+            'columns': self.product_cols
+            }
+        self.cursor.execute(sql)
+
         sql = """
             COPY prescriptions_prescription (%(columns)s)
             FROM '%(filename)s'
@@ -60,14 +76,20 @@ class Command(BaseCommand):
         self.cursor.execute(sql)
 
     def clean_data(self):
+
+        known_bnfs = [p.pk for p in Product.objects.all()]
+
         infile = csv.reader(open(self.filename))
         infile.next()
         outfile = csv.writer(open('/tmp/data.csv', 'w'))
         product_file = csv.writer(open('/tmp/product.csv', 'w'))
-        self.filename = "/tmp/date.csv"
+
+        self.filename = "/tmp/data.csv"
+        self.product_filename = "/tmp/product.csv"
+
         for line in infile:
             line = [x.strip() for x in line]
-            
+
             outfile.writerow([
                 line[3],
                 line[2],
@@ -76,47 +98,19 @@ class Command(BaseCommand):
                 line[7],
                 line[8],
             ])
-    
-    
+
+            if line[3] not in known_bnfs:
+                known_bnfs.append(line[3])
+                product_file.writerow([
+                        line[3],
+                        line[4]
+                        ])
+
     def handle(self, **options):
         assert options['filename']
         assert options['date']
         self.filename = options['filename']
         self.period = options['date']
-        # self.clean_data()
+        self.clean_data()
         self.copy()
-
-        # infile = csv.reader(ReadlineIterator(sys.stdin))
-        # infile.next()
-        # for line in infile:
-        #     line = [x.strip() for x in line]
-        #     
-        #     try:
-        #         product = Product.objects.get(pk=line[3])
-        #     except Product.DoesNotExist:
-        #         product = Product(
-        #             pk=line[3],
-        #             name = line[4],
-        #             )
-        #         product.save()
-        #     
-        #     practice = Practice.objects.get(pk=line[2])
-        #     
-        #     kwargs = {
-        #         'period': int(line[-1]),
-        #         'product' : product,
-        #         'practice' : practice,
-        #     }
-        #     
-        #     # except Prescription.DoesNotExist:
-        #     P = Prescription(**kwargs)
-        #     P.nic = float(line[6])
-        #     P.actual_cost = float(line[7])
-        #     P.quantity = int(line[5])
-        # 
-        #     P.save()
-
-
-
-
 
