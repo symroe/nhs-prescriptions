@@ -7,6 +7,42 @@ Throwing it up here in the hope it turns in to something cool one day.
 
 :)
 
+Examples
+========
+
+You will be able to see awesomer & awesomer examples at http://prescriptions.openhealthcare.org.uk
+
+API
+===
+
+
+/api/drug/
+
+=> All drugs in the prescribing list
+
+/api/drug/?name=Rosuvastatin
+
+=> [{name:'Rosuvastatin'...}]
+
+/api/drug/?name=Rosuvastatin,Fluvastatin
+
+=> [{name:'Rosuvastatin'...},{name: 'Fluvastatin'...}]
+
+
+/api/drug/habits/?name=Fluvastatin
+
+=> [{"code": "0212000M0", "name": "Fluvastatin Sodium", "habit": [{"total": 13668, "period": 201202}, ...]]
+
+/api/drug/habits/
+
+=> Don't do this, it will aggregate the entire multiple gig dataset, not particularly efficiently, and
+   return all historical aggregate data for all drugs.
+
+
+/api/practice/
+
+=> All practice data
+
 Installishes
 ============
 
