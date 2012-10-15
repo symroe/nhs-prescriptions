@@ -1,5 +1,7 @@
+import sys
+
 from fabric.api import *
-from fabric.colors import red
+from fabric.colors import red, green
 import requests
 
 web = ['openhealthcare.org.uk']
@@ -35,7 +37,9 @@ def deploy():
     for site in serves:
         req = requests.get(site)
         if req.status_code != 200:
-            red("Cripes! something just blew up Larry! ({0})".format(site))
+            print red("Cripes! something just blew up Larry! ({0})".format(site))
+            sys.exit(1)
+    print green("Deploy-o-rama!")
 
 
 
