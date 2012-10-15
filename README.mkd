@@ -14,7 +14,13 @@ General Postgis dance...
 General download data dance...
 
 $ pip install -r requirements.txt
+
 $ python manage.py syncdb
+
 $ python manage.py migrate
+
 $ cat your_practices_file.csv | python manage.py import_practices
+
 $ python manage.py import_prescriptions your_csv_file.csv
+
+Note - your database user must be a superuser to import prescriptions.
