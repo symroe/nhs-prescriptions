@@ -34,7 +34,7 @@ class Drug(ApiView):
     @jsonp
     def get(self, request, *args, **kwargs):
         if 'name' not in request.GET:
-            return HttpResponseBadRequest("Can't figure out what name you want larry?")
+            products = Product.objects.all()
         namestr = request.GET['name']
         if ',' in namestr:
             products = Product.objects.filter(name__in=namestr)
