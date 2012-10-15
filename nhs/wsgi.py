@@ -14,6 +14,11 @@ framework.
 
 """
 import os
+import sys
+
+here =  os.path.dirname((os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(here, 'venv/lib/python2.6/site-packages'))
+sys.path.insert(0, here)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nhs.settings")
 
