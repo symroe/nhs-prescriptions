@@ -24,7 +24,7 @@ http://prescriptions.openhealthcare.org.uk/api/drug/?name=Rosuvastatin
 
 => [{name:'Rosuvastatin'...}]
 
-http://prescriptions.openhealthcare.org.uk/api/drug/?name=Rosuvastatin Calcium,Fluvastatin Sodium
+[Multiple names]("http://prescriptions.openhealthcare.org.uk/api/drug/?name=Rosuvastatin Calcium,Fluvastatin Sodium")
 
 (Must be exact names as returned by the drug list here)
 
