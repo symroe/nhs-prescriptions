@@ -93,9 +93,12 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'south',
+    'django_extensions',
+
     'prescriptions',
     'practices',
     'patents',
+    'api',
 )
 
 GEOS_LIBRARY_PATH = '/app/.geodjango/geos/lib/libgeos_c.so'

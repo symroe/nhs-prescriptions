@@ -9,7 +9,7 @@ urlpatterns = patterns(
     '',
     url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
     # Example:
-    # (r'^nhs/', include('nhs.foo.urls')),
+    url(r'^api/', include('nhs.api.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
