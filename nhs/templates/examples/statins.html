@@ -1,19 +1,19 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>UK Statin Usage</title>
+{% extends 'base.html' %}
+{% block title %}UK Statin Usage{% endblock %}
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	</head>
-	<body>
+{% block extrahead %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+{% endblock %}
+
+{% block extrascripts %}
 	  <script type="text/javascript" src="{{STATIC_URL}}js/lib/underscore.js"></script>
-
-            <script src="{{STATIC_URL}}js/lib/highcharts.js"></script>
-            <script src="{{STATIC_URL}}js/modules/exporting.js"></script>
+          <script src="{{STATIC_URL}}js/lib/highcharts.js"></script>
+          <script src="{{STATIC_URL}}js/modules/exporting.js"></script>
 	  <script type="text/javascript" src="{{STATIC_URL}}js/statin.highcharts.js"></script>
 
-<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-
-	</body>
-</html>
+{% endblock %}

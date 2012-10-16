@@ -1,1 +1,42 @@
 {% extends 'base.html' %}
+{% block content %}
+    <div class="page-header">
+    <h2>What's this all about then?</h2>
+  </div>
+
+    <div class="span8">
+      <p>
+        So it turns out that the <a href="http://www.nhs.uk/">NHS</a> open sources all of
+        it's <a href="http://www.ic.nhs.uk/services/transparency/prescribing-by-gp-practice">GP prescribing data</a>.
+      </p>
+      <p>
+        Which is <b>clearly awesone</b>.
+      </p>
+      <p>
+        Here, we turn those CSV's into several things:
+        <ul>
+         <li>
+           An API that you can call to do useful things with the data
+         </li>
+         <li>
+           A whole bunch of visualisations that are somewhat interesting (Provided you have <i>some</i> intellectual
+           curiosity).
+         </li>
+        </ul>
+      </p>
+    </div>
+
+</section>
+<div class="span12">
+<section id="graphlist">
+<h2>Some examples:</h2>
+<ul>
+  <li>
+    <a href="/examples/group/statins/">Aggregate UK statin prescriptions</a>
+  </li>
+</ul>
+</section>
+
+</div>
+
+{% endblock %}
