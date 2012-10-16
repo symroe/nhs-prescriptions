@@ -49,7 +49,7 @@ $(function () {
                     tooltip: {
                         formatter: function() {
                             return '<b>'+ this.series.name +'</b><br/>'+
-                                this.x +': '+ this.y +'°C';
+                                this.x +': '+ this.y +' prescriptions';
                         }
                     },
                     legend: {
