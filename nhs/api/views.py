@@ -8,7 +8,7 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.generic import View
 
 from nhs.practices.models import Practice
-from nhs.prescriptions.models import Product
+from nhs.prescriptions.models import Group, Product
 
 def nameset(request, model):
     """
@@ -79,6 +79,32 @@ class DrugHabits(ApiView):
                               habit=drughabit))
 
         return habit
+
+class GroupHabits(ApiView):
+    """
+    The historical aggregate of all drugs
+    in the group
+    """
+    @jsonp
+    def get(self, request, *args, **kwargs):
+        if 'name' not in request.GET:
+            return HttpResponseBadRequest("Must have a name Larry!")
+        group = Group.objects.filter(name=request.GET['name'])
+        habit = []
+        if not group:
+            return habit
+
+        for drug in group[0].drugs.all():
+            drughabit = list(sorted(drug.prescription_set.
+                                         values('period').
+                                         annotate(total=Sum('quantity')),
+                                    key=lambda x: x['period']))
+
+            habit.append(dict(code=drug.bnf_code, name=drug.name,
+                              habit=drughabit))
+
+        return habit
+
 
 
 class LocalDrug(ApiView):
