@@ -12,6 +12,8 @@ Examples
 
 You will be able to see awesomer & awesomer examples at http://prescriptions.openhealthcare.org.uk
 
+http://prescriptions.openhealthcare.org.uk/examples/group/statins/
+
 API
 ===
 
