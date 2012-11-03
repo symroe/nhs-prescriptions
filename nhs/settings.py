@@ -102,6 +102,7 @@ INSTALLED_APPS = (
     'prescriptions',
     'practices',
     'patents',
+    'nice',
     'api',
 )
 
