@@ -97,6 +97,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'south',
     'django_extensions',
+    'mapit',
 
     'prescriptions',
     'practices',
@@ -107,6 +108,10 @@ INSTALLED_APPS = (
 GEOS_LIBRARY_PATH = '/app/.geodjango/geos/lib/libgeos_c.so'
 
 GDAL_LIBRARY_PATH = '/app/.geodjango/gdal/lib/libgdal.so'
+
+MAPIT_AREA_SRID = 4326
+MAPIT_COUNTRY = 'GB'
+
 
 try:
     from local_settings import *

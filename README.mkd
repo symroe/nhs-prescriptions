@@ -64,3 +64,14 @@ $ cat your_practices_file.csv | python manage.py import_practices
 $ python manage.py import_prescriptions your_csv_file.csv
 
 Note - your database user must be a superuser to import prescriptions.
+
+The Postcode data can be obtained from Ordnance Survey
+
+http://www.ordnancesurvey.co.uk/oswebsite/products/code-point-open/index.html
+
+The Django management command to import postcodes is
+
+python manage.py mapit_import_postcodes --coord-field-lon 3
+ --coord-field-lat 4 /tmp/postcodes.csv
+
+ ...where we assume that postcodes.csv is our combined csv of all of the codepoint stuff.

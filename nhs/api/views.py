@@ -1,6 +1,23 @@
 """
 Serve views for our API callsn
+
+Notes:
+
+This approach is distinctly exploratory.
+There is code here that could be drier.
+On the other hand, when looking at the existing "API-In-A-Box" solutions
+out there for Django, they all came up lacking.
+
+Given that the functionality we'd actually use wasn't all that, we're
+building our own wheel, and we're going to like it.
+
+Maximum flexibility, and maximum responsiveness to the demands of API
+consumers- more important right now than DRY.
+
+Having said that, anyone who wants to try and refactor the generic portions
+is welcome:)
 """
+import collections
 import json
 
 from django.db.models import Sum
@@ -31,7 +48,6 @@ def nameset(request, model):
             return model.objects.filter(name__in=namestr)
         else:
             return model.objects.filter(name__icontains=namestr)
-
 
 class ApiView(View):
     http_method_names = ['get']
@@ -67,13 +83,14 @@ class DrugHabits(ApiView):
     """
     @jsonp
     def get(self, request, *args, **kwargs):
-        drugs = nameset(request, Product)
-        habit = []
         for drug in drugs:
             drughabit = list(sorted(drug.prescription_set.
                                          values('period').
                                          annotate(total=Sum('quantity')),
                                     key=lambda x: x['period']))
+            if per:
+                for period in drughabit.values():
+                    sums[period['period']] += period['quantity']
 
             habit.append(dict(code=drug.bnf_code, name=drug.name,
                               habit=drughabit))
@@ -125,4 +142,20 @@ class Practices(ApiView):
                      postcode=p.postcode, address=p.address) for p in practices]
 
 class PracticeHabits(ApiView):
-    pass
+
+    @jsonp
+    def get(request):
+        if 'name' not in request.GET:
+            return HttpResponseBadRequest("Must have a name Larry!")
+        practices = nameset(request, Practice)
+        habits = []
+        # for practice in practices:
+        #     scrips = practice.prescription_set.all()
+        #     habits.append(
+        #         dict(practice=practice.name,
+        #              habit={code: d.product.bnf_code,
+        #                     period: d.period,
+        #                     quantity: d.quantity for d  in scrips})
+        #         )
+        return habits
+

@@ -4,7 +4,9 @@ from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
-# admin.autodiscover()
+
+from django.contrib.gis import admin
+admin.autodiscover()
 
 urlpatterns = patterns(
     '',
@@ -12,7 +14,9 @@ urlpatterns = patterns(
     # API
     url(r'^api/', include('nhs.api.urls')),
     # Examples
-    url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph')
+    url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
+
+    url(r'^mapit/', include('mapit.urls')),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:

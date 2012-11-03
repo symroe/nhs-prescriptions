@@ -12,3 +12,4 @@ python-dateutil==1.5
 requests==0.14.1
 six==1.2.0
 wsgiref==0.1.2
+django-mapit
