@@ -26,8 +26,12 @@ class Command(BaseCommand):
         csvfile = ffs.Path(options['filename'])
         with csvfile.csv(header=True) as csv:
             for expiry in csv:
-                drug = Product.objects.get(name=expiry.name)
-                patent = Patent.objects.get_or_create(drug=drug)[0]
-                patent.expiry_date = datetime.datetime.strptime(drug.expiry, '%d/%m/%Y')
+                try:
+                    drug = Product.objects.get(name=expiry.name)
+                except Product.DoesNotExist:
+                    continue
+                expiry_date = datetime.datetime.strptime(expiry.expiry, '%d/%m/%Y')
+                patent = Patent.objects.get_or_create(drug=drug, expiry_date = expiry_date)[0]
+
                 patent.save()
 
