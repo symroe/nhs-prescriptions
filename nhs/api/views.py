@@ -24,6 +24,7 @@ from django.db.models import Sum
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.generic import View
 
+from nhs.patents.models import Patent
 from nhs.practices.models import Practice
 from nhs.prescriptions.models import Group, Product
 
@@ -112,13 +113,34 @@ class GroupHabits(ApiView):
             return habit
 
         for drug in group[0].drugs.all():
-            drughabit = list(sorted(drug.prescription_set.
-                                         values('period').
-                                         annotate(total=Sum('quantity')),
-                                    key=lambda x: x['period']))
+            if 'practice' in request.GET:
+                drughabit = list(sorted(drug.prescription_set.
+                                        filter(practice__practice = request.GET['practice']).
+                                        values('period').
+                                        annotate(total=Sum('quantity')),
+                                        key=lambda x: x['period']))
+
+                print drughabit
+
+
+            else:
+                drughabit = list(sorted(drug.prescription_set.
+                                             values('period').
+                                             annotate(total=Sum('quantity')),
+                                        key=lambda x: x['period']))
+            try:
+                patent = Patent.objects.get(drug=drug)
+                patent = patent.expiry_date.strftime('%Y%m')
+            except Patent.DoesNotExist:
+                patent = None
 
             habit.append(dict(code=drug.bnf_code, name=drug.name,
+                              patent = patent,
                               habit=drughabit))
+
+
+
+
 
         return habit
 

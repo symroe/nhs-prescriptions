@@ -15,6 +15,9 @@ urlpatterns = patterns(
     url(r'^api/', include('nhs.api.urls')),
     # Examples
     url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
+    url(r'^examples/patents/statins/$', TemplateView.as_view(template_name='examples/patins.html'), name='statgraph'),
+    url(r'^examples/patents/practice/$', TemplateView.as_view(template_name='examples/patentpractice.html'), name='statgraph'),
+    url(r'^examples/nice/$', TemplateView.as_view(template_name='examples/nice.html'), name='statgraph'),
 
     url(r'^mapit/', include('mapit.urls')),
 

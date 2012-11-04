@@ -14,7 +14,7 @@ class Command(BaseCommand):
         for practice in practices.models.all():
             pc = Postcode.objects.filter(postcode=practice.postcode)
             if len(pc) == 0:
-                import pdb; pdb.set_trace()
+                print pc
             else:
                 pc = pc[0]
             practice.pc = pc

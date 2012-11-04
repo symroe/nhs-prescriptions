@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}UK Statin Usage{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+</script>
+{% endblock %}
+
+{% block h1 %}
+  <h1>Individual practices</h1>
+  <p>Looking for external factors. </p>
+{% endblock %}
+
+{% block content %}
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+{% endblock %}
+
+{% block extrascripts %}
+	  <script type="text/javascript" src="{{STATIC_URL}}js/lib/underscore.js"></script>
+          <script src="{{STATIC_URL}}js/lib/highcharts.js"></script>
+          <script src="{{STATIC_URL}}js/modules/exporting.js"></script>
+	  <script type="text/javascript" src="{{STATIC_URL}}js/statin.patents.practice.highcharts.js"></script>
+
+{% endblock %}

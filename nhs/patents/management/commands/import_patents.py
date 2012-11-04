@@ -1,5 +1,5 @@
 """
-Create our editorial product groupings on a new db
+Import Patents
 """
 import datetime
 from optparse import make_option

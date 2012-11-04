@@ -50,8 +50,10 @@
 <header class="jumbotron subhead" id="overview">
   <div class="row">
     <div class="span6">
+     {% block h1 %}
       <h1>NHS GP Prescriptions</h1>
       <p class="lead">Now interesting for human beings!</p>
+     {% endblock %}
     </div>
   </div>
 </header>
@@ -77,9 +79,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/application.js"></script>
-    <script src="../js/bootswatch.js"></script>
+    <!-- <script src="../js/bootstrap.min.js"></script> -->
+    <!-- <script src="../js/application.js"></script> -->
+    <!-- <script src="../js/bootswatch.js"></script> -->
     {% block extrascripts %}
 
     {% endblock %}
