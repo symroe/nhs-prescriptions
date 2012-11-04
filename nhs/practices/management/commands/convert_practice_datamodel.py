@@ -14,7 +14,8 @@ class Command(BaseCommand):
         for practice in Practice.objects.all():
             pc = Postcode.objects.filter(postcode=practice.postcode)
             if len(pc) == 0:
-                print pc
+                continue
+                print practice.postcode
             else:
                 pc = pc[0]
             practice.pc = pc
