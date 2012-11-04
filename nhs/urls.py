@@ -24,7 +24,7 @@ urlpatterns = patterns(
     url(r'^examples/patents/statins/$', TemplateView.as_view(template_name='examples/patins.html'), name='statgraph'),
     url(r'^examples/patents/practice/$', TemplateView.as_view(template_name='examples/patentpractice.html'), name='statgraph'),
     url(r'^examples/nice/$', TemplateView.as_view(template_name='examples/nice.html', get_context_data=lambda:{'rec':getrecs()}), name='statgraph'),
-
+    url(r'^examples/lottery/',  'api.views.lottery'),
     url(r'^mapit/', include('mapit.urls')),
 
 
