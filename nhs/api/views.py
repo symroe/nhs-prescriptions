@@ -120,8 +120,6 @@ class GroupHabits(ApiView):
                                         annotate(total=Sum('quantity')),
                                         key=lambda x: x['period']))
 
-                print drughabit
-
 
             else:
                 drughabit = list(sorted(drug.prescription_set.

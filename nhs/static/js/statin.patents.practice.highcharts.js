@@ -38,7 +38,7 @@ $(function () {
                         marginBottom: 25
                     },
                     title: {
-                        text: 'Monthly UK Statins with Patent expiry',
+                        text: 'Individual Practice Statins with Patent expiry',
                         x: -20 //center
                     },
                     subtitle: {
