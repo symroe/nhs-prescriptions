@@ -182,7 +182,7 @@ class PracticeHabits(ApiView):
         return habits
 
 def lottery(request):
-    g = Group.get(name='lottery')
+    g = Group.objects.get(name='lottery')
     drug = g.drugs.all()[0]
     practices = set([p.practice for p in drug.prescription_set.all()])
     render_to_response('examples/lottery.html', dict(practices=practices))
