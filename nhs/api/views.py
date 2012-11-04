@@ -23,6 +23,8 @@ import json
 from django.db.models import Sum
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.generic import View
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 from nhs.patents.models import Patent
 from nhs.practices.models import Practice
@@ -179,3 +181,8 @@ class PracticeHabits(ApiView):
         #         )
         return habits
 
+def lottery(request):
+    g = Group.get(name='lottery')
+    drug = g.drugs.all()[0]
+    practices = set([p.practice for p in drug.prescription_set.all()])
+    render_to_response('examples/lottery.html', dict(practices=practices))
