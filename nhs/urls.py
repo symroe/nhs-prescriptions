@@ -8,6 +8,12 @@ from django.views.generic import TemplateView
 from django.contrib.gis import admin
 admin.autodiscover()
 
+from nhs.nice.models import Recommendation
+
+def getrecs():
+    return Recommendation.objects.all()[0]
+
+
 urlpatterns = patterns(
     '',
     url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
@@ -17,7 +23,7 @@ urlpatterns = patterns(
     url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
     url(r'^examples/patents/statins/$', TemplateView.as_view(template_name='examples/patins.html'), name='statgraph'),
     url(r'^examples/patents/practice/$', TemplateView.as_view(template_name='examples/patentpractice.html'), name='statgraph'),
-    url(r'^examples/nice/$', TemplateView.as_view(template_name='examples/nice.html'), name='statgraph'),
+    url(r'^examples/nice/$', TemplateView.as_view(template_name='examples/nice.html', get_context_data=lambda:{'rec':getrecs()}), name='statgraph'),
 
     url(r'^mapit/', include('mapit.urls')),
 
