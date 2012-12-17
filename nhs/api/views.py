@@ -27,6 +27,7 @@ from django.views.generic import View
 from nhs.ccgs.models import CCG
 from nhs.practices.models import Practice
 from nhs.prescriptions.models import Group, Product
+from nhs.api.util import get_geometry
 
 def nameset(request, model):
     """
@@ -173,7 +174,9 @@ class CCGs(ApiView):
     def get(self, request, *args, **kwargs):
         ccg = nameset(request, CCG)
         return [dict(title=c.title, name=c.name, region=c.region,
-                     population=c.population) for c in ccg]
+                population=c.population,
+                geometry=get_geometry(c.poly) if 'geometry' in request.GET else None) for c in ccg]
+
 
 class CCGHabits(ApiView):
 
