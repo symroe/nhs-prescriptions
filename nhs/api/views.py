@@ -173,7 +173,8 @@ class CCGs(ApiView):
     @jsonp
     def get(self, request, *args, **kwargs):
         ccg = nameset(request, CCG)
-        return [dict(title=c.title, name=c.name, region=c.region,
+        return [dict(title=c.title, name=c.name,
+                region=c.region,
                 population=c.population,
                 geometry=get_geometry(c.poly) if 'geometry' in request.GET else None) for c in ccg]
 
