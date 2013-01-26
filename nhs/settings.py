@@ -1,4 +1,5 @@
 # Django settings for nhs project.
+import os
 import ffs
 
 DEBUG = True
@@ -91,24 +92,21 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.gis',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admindocs',
     'south',
     'django_extensions',
     'mapit',
-
     'prescriptions',
     'practices',
     'patents',
     'nice',
     'api',
+    'ccgs',
 )
 
-GEOS_LIBRARY_PATH = '/app/.geodjango/geos/lib/libgeos_c.so'
-
-GDAL_LIBRARY_PATH = '/app/.geodjango/gdal/lib/libgdal.so'
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH','/app/.geodjango/geos/lib/libgeos_c.so')
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH','/app/.geodjango/gdal/lib/libgdal.so')
 
 MAPIT_AREA_SRID = 4326
 MAPIT_COUNTRY = 'GB'

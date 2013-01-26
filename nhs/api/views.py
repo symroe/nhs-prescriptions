@@ -27,8 +27,10 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from nhs.patents.models import Patent
+from nhs.ccgs.models import CCG
 from nhs.practices.models import Practice
 from nhs.prescriptions.models import Group, Product
+from nhs.api.util import get_geometry
 
 def nameset(request, model):
     """
@@ -186,3 +188,38 @@ def lottery(request):
     drug = g.drugs.all()[0]
     practices = set([p.practice for p in drug.prescription_set.all()])
     return render_to_response('examples/lottery.html', dict(practices=practices), RequestContext(request))
+
+# !!! Extend this to take a location prameter thing
+class CCGs(ApiView):
+    """
+    All the information we have on specific CCGs, or all if
+    no specific name is specified.
+
+    example use case: Plot all practices on a map for further drill downs.
+    """
+    @jsonp
+    def get(self, request, *args, **kwargs):
+        ccg = nameset(request, CCG)
+        return [dict(title=c.title, name=c.name,
+                region=c.region,
+                population=c.population,
+                geometry=get_geometry(c.poly) if 'geometry' in request.GET else None) for c in ccg]
+
+
+class CCGHabits(ApiView):
+
+    @jsonp
+    def get(request):
+        if 'name' not in request.GET:
+            return HttpResponseBadRequest("Must have a name Larry!")
+        ccgs = nameset(request, CCG)
+        habits = []
+        # for practice in practices:
+        #     scrips = practice.prescription_set.all()
+        #     habits.append(
+        #         dict(practice=practice.name,
+        #              habit={code: d.product.bnf_code,
+        #                     period: d.period,
+        #                     quantity: d.quantity for d  in scrips})
+        #         )
+        return habits

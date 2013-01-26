@@ -3,7 +3,8 @@ Urls for the APIs we propose to expose to the outside world
 """
 from django.conf.urls.defaults import patterns, url
 
-from nhs.api.views import Drug, DrugHabits, GroupHabits, LocalDrug, PracticeHabits, Practices
+from nhs.api.views import (Drug, DrugHabits, GroupHabits, LocalDrug,
+                           PracticeHabits, Practices, CCGHabits, CCGs)
 
 urlpatterns = patterns(
     '',
@@ -12,5 +13,7 @@ urlpatterns = patterns(
     url(r'drug/habits/location/$',  LocalDrug.as_view(),      name='localdrugapi'),
     url(r'group/habits/$',          GroupHabits.as_view(),     name = "grouphabitsapi"),
     url(r'practice/habits/$',       PracticeHabits.as_view(), name='practicehabitsapi'),
-    url(r'practice/$',              Practices.as_view(),       name='practiceapi')
+    url(r'practice/$',              Practices.as_view(),       name='practiceapi'),
+    url(r'ccg/$',                  CCGs.as_view(),           name='ccgapi'),
+    url(r'ccg/habits/$',           CCGHabits.as_view(),     name = "ccghabitsapi"),
     )
