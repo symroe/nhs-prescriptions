@@ -14,9 +14,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-import dj_database_url
-
-DATABASES = {'default': dj_database_url.config(default='postgis://localhost/scrip')}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -104,9 +101,6 @@ INSTALLED_APPS = (
     'api',
     'ccgs',
 )
-
-GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH','/app/.geodjango/geos/lib/libgeos_c.so')
-GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH','/app/.geodjango/gdal/lib/libgdal.so')
 
 MAPIT_AREA_SRID = 4326
 MAPIT_COUNTRY = 'GB'
