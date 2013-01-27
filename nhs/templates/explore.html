@@ -1,0 +1,19 @@
+{% extends 'baser.html' %}
+
+{% block extratemplates %}
+{% include 'must/bnftree.html' %}
+{% include 'must/bnf_node_template.html' %}
+{% endblock %}
+
+{% block content %}
+  <h1>
+    Explore NHS Prescription data
+  </h1>
+
+  <div id="backbone-main">
+  </div>
+{% endblock %}
+
+{% block extrascripts %}
+  <script src="{{STATIC_URL}}js/explore.js"></script>
+{% endblock %}

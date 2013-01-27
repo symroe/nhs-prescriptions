@@ -1,0 +1,91 @@
+body.custom-background { background-image: url('https://s3-eu-west-1.amazonaws.com/prescribinganalytics/img/bg.jpg'); background-repeat: no-repeat;
+background-position: top left; background-attachment: fixed; }
+
+#mainNav ul a, #mainNav ul li.sfHover ul a { color: #8f8f8f !important;	}
+	#mainNav ul li.current a,
+	#mainNav ul li.current-cat a,
+	#mainNav ul li.current_page_item a,
+	#mainNav ul li.current-menu-item a,
+	#mainNav ul li.current-post-ancestor a,
+	.single-post #mainNav ul li.current_page_parent a,
+	#mainNav ul li.current-category-parent a,
+	#mainNav ul li.current-category-ancestor a,
+	#mainNav ul li.current-portfolio-ancestor a,
+	#mainNav ul li.current-projects-ancestor a {
+		color: #2e2e2e !important;
+	}
+	#mainNav ul li.sfHover a,
+	#mainNav ul li a:hover,
+	#mainNav ul li:hover {
+		color: #2e2e2e !important;
+	}
+	#mainNav ul li.sfHover ul a:hover { color: #2e2e2e !important;}
+
+blockquote, address {
+	border-left: 5px solid #cdb980;
+}
+#content #filterNav, #content .project.small .overlay, .f_circleG, .skillList li span a:hover, .tax-skill #pageHead { background: #cdb980;}
+@-webkit-keyframes f_fadeG{
+0%{background-color:#ffffff}
+100%{background-color:#cdb980;}
+}
+@-moz-keyframes f_fadeG{
+0%{background-color:#ffffff}
+100%{background-color:#cdb980;}
+}
+@-o-keyframes f_fadeG{
+0%{background-color:#ffffff}
+100%{background-color:#cdb980;}
+}
+@-ms-keyframes f_fadeG{
+0%{background-color:#ffffff}
+100%{background-color:#cdb980;}
+}
+
+a { color: #3a8585;}
+a:hover {color: #f1532f;}
+.button, #searchsubmit, input[type="submit"] {background-color: #f1532f !important;}
+.button:hover, #searchsubmit:hover, input[type="submit"]:hover {background-color: #78bc99 !important;}
+
+.thanks {
+    background-color: #a7daa7;
+    padding: 6px;
+    font-weight: bold;
+}
+
+.err {
+    background-color: #f1532f;
+    padding: 6px;
+    font-weight: bold;
+}
+
+#map {
+			width: 640px;
+			height: 480px;
+		}
+
+.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+
+		.legend {
+			text-align: left;
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
