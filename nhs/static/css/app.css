@@ -87,5 +87,32 @@ a:hover {color: #f1532f;}
 			height: 18px;
 			float: left;
 			margin-right: 8px;
-			opacity: 0.7;
 		}
+
+
+		#content h3, #content h1, #content h2 {
+
+		    color: #D7301F;
+		    padding: 20px 30px;
+
+		}
+
+
+        #content h4 {
+            color: #900;
+		    padding: 20px 30px;
+
+        }
+        #content h4 a{
+            color: #900;
+        }
+		#content p {
+		    padding: 10px 30px;
+		    font-size: 18px;
+		}
+
+#content img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

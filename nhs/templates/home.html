@@ -2,16 +2,30 @@
 {% block content %}
   <h1>Open Prescriptions</h1>
   <h2></h2>
-  <div>
+  <div id="content">
     <p>
-
+      <img src="{{STATIC_URL}}img/drugssign.jpg">
+      Every month, the <a href="http://www.ic.nhs.uk/home">NHS Information Centre</a>
+      publishes an open dataset of the UK's
+      <a href="http://www.ic.nhs.uk/gpprescribingdata">GP prescribing activity</a>.
+      Roughly ten million records each month. Which is brilliant for openness, transparency
+      and enabling research, but not particularly friendly.
+    </p>
+    <p>
+      Open Prescribing offers a free public API for anyone to build visualisations and
+      answer questions about GP prescribing habits, along with sample applications that
+      make use of the data in interesting ways.
     </p>
     <h2>
+      Research
+    </h2>
+    <h4>
       <a href="/research/inhaler">
         Campaign to change inhaler prescribing patterns
       </a>
-    </h2>
+    </h4>
     <p>
+      <img src="{{STATIC_URL}}img/inhaler.jpg">
       The continued use of metered-dose inhalers in respiratory care will have a potentially
       catastrophic effect on global warming if production is not controlled 2, largely because these
       inhalers use potent green-house gas hydroflourocarbons (HFCs) as propellants.
