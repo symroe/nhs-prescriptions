@@ -1,0 +1,1741 @@
+[
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Control of microbial contamination", 
+        "bnfPart": "1102"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Antifungals", 
+            "bnfPart": "110302"
+          }, 
+          {
+            "nodeName": "Antivirals", 
+            "bnfPart": "110303"
+          }, 
+          {
+            "nodeName": "Antibacterials", 
+            "bnfPart": "110301"
+          }
+        ], 
+        "nodeName": "Anti-infective eye preparations", 
+        "bnfPart": "1103"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Administration of drugs to the eye", 
+        "bnfPart": "1101"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Treatment of glaucoma", 
+        "bnfPart": "1106"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Local anaesthetics", 
+        "bnfPart": "1107"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Other anti-inflammatory preparations", 
+            "bnfPart": "110402"
+          }, 
+          {
+            "nodeName": "Corticosteroids", 
+            "bnfPart": "110401"
+          }
+        ], 
+        "nodeName": "Corticosteroids and other anti-inflammatory preparations", 
+        "bnfPart": "1104"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Mydriatics and cycloplegics", 
+        "bnfPart": "1105"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Ocular diagnostic and peri-operative preparations and photodynamic treatment", 
+            "bnfPart": "110802"
+          }, 
+          {
+            "nodeName": "Tear deficiency, ocular lubricants, and astringents", 
+            "bnfPart": "110801"
+          }
+        ], 
+        "nodeName": "Miscellaneous ophthalmic preparations", 
+        "bnfPart": "1108"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Contact lenses", 
+        "bnfPart": "1109"
+      }
+    ], 
+    "nodeName": "Eye", 
+    "bnfPart": "11"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Corticosteroids", 
+        "bnfPart": "0302"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Leukotriene receptor antagonists", 
+            "bnfPart": "030302"
+          }, 
+          {
+            "nodeName": "Phosphodiesterase type-4 inhibitors", 
+            "bnfPart": "030303"
+          }, 
+          {
+            "nodeName": "Cromoglicate and related therapy", 
+            "bnfPart": "030301"
+          }
+        ], 
+        "nodeName": "Cromoglicate and related therapy and leukotriene receptor antagonists", 
+        "bnfPart": "0303"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Antimuscarinic bronchodilators", 
+            "bnfPart": "030102"
+          }, 
+          {
+            "nodeName": "Theophylline", 
+            "bnfPart": "030103"
+          }, 
+          {
+            "nodeName": "Adrenoceptor agonists", 
+            "bnfPart": "030101"
+          }, 
+          {
+            "nodeName": "Compound bronchodilator preparations", 
+            "bnfPart": "030104"
+          }, 
+          {
+            "nodeName": "Peak flow meters, inhaler devices and nebulisers", 
+            "bnfPart": "030105"
+          }
+        ], 
+        "nodeName": "Bronchodilators", 
+        "bnfPart": "0301"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Oxygen", 
+        "bnfPart": "0306"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Mucolytics", 
+        "bnfPart": "0307"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Allergen Immunotherapy (contains Omalizumab)", 
+            "bnfPart": "030402"
+          }, 
+          {
+            "nodeName": "Allergic emergencies", 
+            "bnfPart": "030403"
+          }, 
+          {
+            "nodeName": "Antihistamines", 
+            "bnfPart": "030401"
+          }
+        ], 
+        "nodeName": "Antihistamines, hyposensitisation, and allergic emergencies", 
+        "bnfPart": "0304"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Systemic nasal decongestants", 
+        "bnfPart": "0310"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Aromatic inhalations", 
+        "bnfPart": "0308"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Expectorant and demulcent cough preparations", 
+            "bnfPart": "030902"
+          }, 
+          {
+            "nodeName": "Cough suppressants", 
+            "bnfPart": "030901"
+          }
+        ], 
+        "nodeName": "Cough preparations", 
+        "bnfPart": "0309"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Pulmonary surfactants", 
+            "bnfPart": "030502"
+          }, 
+          {
+            "nodeName": "Respiratory stimulants", 
+            "bnfPart": "030501"
+          }
+        ], 
+        "nodeName": "Respiratory stimulants and pulmonary surfactants", 
+        "bnfPart": "0305"
+      }
+    ], 
+    "nodeName": "Respiratory system", 
+    "bnfPart": "03"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Miscellaneous", 
+        "bnfPart": "0000"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Diagnostic Contrast Agents", 
+        "bnfPart": "0001"
+      }
+    ], 
+    "nodeName": "Non-BNF Miscellaneous", 
+    "bnfPart": "00"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Topical nasal decongestants", 
+            "bnfPart": "120202"
+          }, 
+          {
+            "nodeName": "Nasal preparations for infection", 
+            "bnfPart": "120203"
+          }, 
+          {
+            "nodeName": "Drugs used in nasal allergy", 
+            "bnfPart": "120201"
+          }
+        ], 
+        "nodeName": "Drugs acting on the nose", 
+        "bnfPart": "1202"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Oropharyngeal anti-infective drugs", 
+            "bnfPart": "120302"
+          }, 
+          {
+            "nodeName": "Lozenges and sprays", 
+            "bnfPart": "120303"
+          }, 
+          {
+            "nodeName": "Drugs for oral ulceration and inflammation", 
+            "bnfPart": "120301"
+          }, 
+          {
+            "nodeName": "Mouthwashes, gargles, and dentifrices", 
+            "bnfPart": "120304"
+          }, 
+          {
+            "nodeName": "Treatment of dry mouth", 
+            "bnfPart": "120305"
+          }
+        ], 
+        "nodeName": "Drugs acting on the oropharynx", 
+        "bnfPart": "1203"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Otitis media", 
+            "bnfPart": "120102"
+          }, 
+          {
+            "nodeName": "Removal of ear wax", 
+            "bnfPart": "120103"
+          }, 
+          {
+            "nodeName": "Otitis externa", 
+            "bnfPart": "120101"
+          }
+        ], 
+        "nodeName": "Drugs acting on the ear", 
+        "bnfPart": "1201"
+      }
+    ], 
+    "nodeName": "Ear, nose, and oropharynx", 
+    "bnfPart": "12"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Local anaesthesia", 
+        "bnfPart": "1502"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Inhalational anaesthetics", 
+            "bnfPart": "150102"
+          }, 
+          {
+            "nodeName": "Antimuscarinic drugs", 
+            "bnfPart": "150103"
+          }, 
+          {
+            "nodeName": "Intravenous anaesthetics", 
+            "bnfPart": "150101"
+          }, 
+          {
+            "nodeName": "Drugs for reversal of neuromuscular blockade", 
+            "bnfPart": "150106"
+          }, 
+          {
+            "nodeName": "Antagonists for central and respiratory depression", 
+            "bnfPart": "150107"
+          }, 
+          {
+            "nodeName": "Sedative and analgesic peri-operative drugs", 
+            "bnfPart": "150104"
+          }, 
+          {
+            "nodeName": "Neuromuscular blocking drugs", 
+            "bnfPart": "150105"
+          }
+        ], 
+        "nodeName": "General anaesthesia", 
+        "bnfPart": "1501"
+      }
+    ], 
+    "nodeName": "Anaesthesia", 
+    "bnfPart": "15"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Passive immunity", 
+        "bnfPart": "1402"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Active immunity", 
+        "bnfPart": "1401"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "International travel", 
+        "bnfPart": "1406"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Vaccines and antisera", 
+        "bnfPart": "1404"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Disease-specific immunoglobulins", 
+            "bnfPart": "140502"
+          }, 
+          {
+            "nodeName": "Normal immunoglobulin", 
+            "bnfPart": "140501"
+          }
+        ], 
+        "nodeName": "Immunoglobulins", 
+        "bnfPart": "1405"
+      }
+    ], 
+    "nodeName": "Immunological products and vaccines", 
+    "bnfPart": "14"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Antipsychotic depot injections", 
+            "bnfPart": "040202"
+          }, 
+          {
+            "nodeName": "Antimanic drugs", 
+            "bnfPart": "040203"
+          }, 
+          {
+            "nodeName": "Antipsychotic drugs", 
+            "bnfPart": "040201"
+          }
+        ], 
+        "nodeName": "Drugs used in psychoses and related disorders", 
+        "bnfPart": "0402"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Monoamine-oxidase inhibitors (MAOIs)", 
+            "bnfPart": "040302"
+          }, 
+          {
+            "nodeName": "Selective serotonin re-uptake inhibitors", 
+            "bnfPart": "040303"
+          }, 
+          {
+            "nodeName": "Tricyclic and related antidepressant drugs", 
+            "bnfPart": "040301"
+          }, 
+          {
+            "nodeName": "Other antidepressant drugs", 
+            "bnfPart": "040304"
+          }
+        ], 
+        "nodeName": "Antidepressant drugs", 
+        "bnfPart": "0403"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Anxiolytics", 
+            "bnfPart": "040102"
+          }, 
+          {
+            "nodeName": "Barbiturates", 
+            "bnfPart": "040103"
+          }, 
+          {
+            "nodeName": "Hypnotics", 
+            "bnfPart": "040101"
+          }
+        ], 
+        "nodeName": "Hypnotics and anxiolytics", 
+        "bnfPart": "0401"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Drugs used in nausea and vertigo", 
+        "bnfPart": "0406"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Opioid analgesics", 
+            "bnfPart": "040702"
+          }, 
+          {
+            "nodeName": "Neuropathic pain", 
+            "bnfPart": "040703"
+          }, 
+          {
+            "nodeName": "Non-opioid analgesics and compound analgesic preparations", 
+            "bnfPart": "040701"
+          }, 
+          {
+            "nodeName": "Antimigraine drugs", 
+            "bnfPart": "040704"
+          }
+        ], 
+        "nodeName": "Analgesics", 
+        "bnfPart": "0407"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "CNS stimulants and drugs used for attention deficit hyperactivity disorder", 
+        "bnfPart": "0404"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Nicotine dependence", 
+            "bnfPart": "041002"
+          }, 
+          {
+            "nodeName": "Opioid dependence", 
+            "bnfPart": "041003"
+          }, 
+          {
+            "nodeName": "Alcohol dependence", 
+            "bnfPart": "041001"
+          }
+        ], 
+        "nodeName": "Drugs used in substance dependence", 
+        "bnfPart": "0410"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Drugs used in status epilepticus", 
+            "bnfPart": "040802"
+          }, 
+          {
+            "nodeName": "Febrile convulsions", 
+            "bnfPart": "040803"
+          }, 
+          {
+            "nodeName": "Control of epilepsy", 
+            "bnfPart": "040801"
+          }
+        ], 
+        "nodeName": "Antiepileptic drugs", 
+        "bnfPart": "0408"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Centrally acting appetite suppressants", 
+            "bnfPart": "040502"
+          }, 
+          {
+            "nodeName": "Anti-obesity drugs acting on the gastro-intestinal tract", 
+            "bnfPart": "040501"
+          }
+        ], 
+        "nodeName": "Drugs used in the treatment of obesity", 
+        "bnfPart": "0405"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Antimuscarinic drugs used in parkinsonism", 
+            "bnfPart": "040902"
+          }, 
+          {
+            "nodeName": "Drugs used in essential tremor, chorea, tics, and related disorders", 
+            "bnfPart": "040903"
+          }, 
+          {
+            "nodeName": "Dopaminergic drugs used in Parkinson's disease", 
+            "bnfPart": "040901"
+          }
+        ], 
+        "nodeName": "Drugs used in parkinsonism and related disorders", 
+        "bnfPart": "0409"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Drugs for dementia", 
+        "bnfPart": "0411"
+      }
+    ], 
+    "nodeName": "Central nervous system", 
+    "bnfPart": "04"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Imidazole antifungals", 
+            "bnfPart": "050202"
+          }, 
+          {
+            "nodeName": "Polyene antifungals", 
+            "bnfPart": "050203"
+          }, 
+          {
+            "nodeName": "Triazole antifungals", 
+            "bnfPart": "050201"
+          }, 
+          {
+            "nodeName": "Echinocandin antifungals", 
+            "bnfPart": "050204"
+          }, 
+          {
+            "nodeName": "Other antifungals", 
+            "bnfPart": "050205"
+          }
+        ], 
+        "nodeName": "Antifungal drugs", 
+        "bnfPart": "0502"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Herpesvirus infections", 
+            "bnfPart": "050302"
+          }, 
+          {
+            "nodeName": "Viral hepatitis", 
+            "bnfPart": "050303"
+          }, 
+          {
+            "nodeName": "HIV infection", 
+            "bnfPart": "050301"
+          }, 
+          {
+            "nodeName": "Influenza", 
+            "bnfPart": "050304"
+          }, 
+          {
+            "nodeName": "Respiratory syncytial virus", 
+            "bnfPart": "050305"
+          }
+        ], 
+        "nodeName": "Antiviral drugs", 
+        "bnfPart": "0503"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Cephalosporins, carbapenems, and other beta-lactams", 
+            "bnfPart": "050102"
+          }, 
+          {
+            "nodeName": "Tetracyclines", 
+            "bnfPart": "050103"
+          }, 
+          {
+            "nodeName": "Urinary-tract infections", 
+            "bnfPart": "050113"
+          }, 
+          {
+            "nodeName": "Penicillins", 
+            "bnfPart": "050101"
+          }, 
+          {
+            "nodeName": "Clindamycin", 
+            "bnfPart": "050106"
+          }, 
+          {
+            "nodeName": "Some other antibacterials", 
+            "bnfPart": "050107"
+          }, 
+          {
+            "nodeName": "Aminoglycosides", 
+            "bnfPart": "050104"
+          }, 
+          {
+            "nodeName": "Macrolides", 
+            "bnfPart": "050105"
+          }, 
+          {
+            "nodeName": "Sulphonamides and trimethoprim", 
+            "bnfPart": "050108"
+          }, 
+          {
+            "nodeName": "Antituberculosis drugs", 
+            "bnfPart": "050109"
+          }, 
+          {
+            "nodeName": "Quinolones", 
+            "bnfPart": "050112"
+          }, 
+          {
+            "nodeName": "Metronidazole and tinidazole", 
+            "bnfPart": "050111"
+          }, 
+          {
+            "nodeName": "Antileprotic drugs", 
+            "bnfPart": "050110"
+          }
+        ], 
+        "nodeName": "Antibacterial drugs", 
+        "bnfPart": "0501"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Amoebicides", 
+            "bnfPart": "050402"
+          }, 
+          {
+            "nodeName": "Trichomonacides", 
+            "bnfPart": "050403"
+          }, 
+          {
+            "nodeName": "Antimalarials", 
+            "bnfPart": "050401"
+          }, 
+          {
+            "nodeName": "Trypanocides", 
+            "bnfPart": "050406"
+          }, 
+          {
+            "nodeName": "Drugs for toxoplasmosis", 
+            "bnfPart": "050407"
+          }, 
+          {
+            "nodeName": "Antigiardial drugs", 
+            "bnfPart": "050404"
+          }, 
+          {
+            "nodeName": "Leishmaniacides", 
+            "bnfPart": "050405"
+          }, 
+          {
+            "nodeName": "Drugs for pneumocystis pneumonia", 
+            "bnfPart": "050408"
+          }
+        ], 
+        "nodeName": "Antiprotozoal drugs", 
+        "bnfPart": "0504"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Ascaricides", 
+            "bnfPart": "050502"
+          }, 
+          {
+            "nodeName": "Drugs for tapeworm infections", 
+            "bnfPart": "050503"
+          }, 
+          {
+            "nodeName": "Drugs for threadworms", 
+            "bnfPart": "050501"
+          }, 
+          {
+            "nodeName": "Filaricides", 
+            "bnfPart": "050506"
+          }, 
+          {
+            "nodeName": "Drugs for hookworms", 
+            "bnfPart": "050504"
+          }, 
+          {
+            "nodeName": "Schistosomicides", 
+            "bnfPart": "050505"
+          }
+        ], 
+        "nodeName": "Anthelmintics", 
+        "bnfPart": "0505"
+      }
+    ], 
+    "nodeName": "Infections", 
+    "bnfPart": "05"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Corticosteroids and other immunosuppressants", 
+            "bnfPart": "080202"
+          }, 
+          {
+            "nodeName": "Anti-lymphocyte monoclonal antibodies", 
+            "bnfPart": "080203"
+          }, 
+          {
+            "nodeName": "Antiproliferative immunosuppressants", 
+            "bnfPart": "080201"
+          }, 
+          {
+            "nodeName": "Other immunomodulating drugs", 
+            "bnfPart": "080204"
+          }
+        ], 
+        "nodeName": "Drugs affecting the immune response", 
+        "bnfPart": "0802"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Progestogens", 
+            "bnfPart": "080302"
+          }, 
+          {
+            "nodeName": "Androgens", 
+            "bnfPart": "080303"
+          }, 
+          {
+            "nodeName": "Oestrogens", 
+            "bnfPart": "080301"
+          }, 
+          {
+            "nodeName": "Hormone antagonists", 
+            "bnfPart": "080304"
+          }
+        ], 
+        "nodeName": "Sex hormones and hormone antagonists in malignant disease", 
+        "bnfPart": "0803"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Anthracyclines and other cytotoxic antibiotics", 
+            "bnfPart": "080102"
+          }, 
+          {
+            "nodeName": "Antimetabolites", 
+            "bnfPart": "080103"
+          }, 
+          {
+            "nodeName": "Alkylating drugs", 
+            "bnfPart": "080101"
+          }, 
+          {
+            "nodeName": "Vinca alkaloids and etoposide", 
+            "bnfPart": "080104"
+          }, 
+          {
+            "nodeName": "Other antineoplastic drugs", 
+            "bnfPart": "080105"
+          }
+        ], 
+        "nodeName": "Cytotoxic drugs", 
+        "bnfPart": "0801"
+      }
+    ], 
+    "nodeName": "Malignant disease and immunosuppression", 
+    "bnfPart": "08"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Antifibrinolytic drugs and haemostatics", 
+        "bnfPart": "0211"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Fibrinolytic drugs", 
+            "bnfPart": "021002"
+          }, 
+          {
+            "nodeName": "Management of stable angina and acute coronary syndromes", 
+            "bnfPart": "021001"
+          }
+        ], 
+        "nodeName": "Stable angina, acute coronary syndromes, and fibrinolysis", 
+        "bnfPart": "0210"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Local sclerosants", 
+        "bnfPart": "0213"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Phosphodiesterase type-3 inhibitors", 
+            "bnfPart": "020102"
+          }, 
+          {
+            "nodeName": "Cardiac glycosides", 
+            "bnfPart": "020101"
+          }
+        ], 
+        "nodeName": "Positive inotropic drugs", 
+        "bnfPart": "0201"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Calcium-channel blockers", 
+            "bnfPart": "020602"
+          }, 
+          {
+            "nodeName": "Other antianginal drugs", 
+            "bnfPart": "020603"
+          }, 
+          {
+            "nodeName": "Nitrates", 
+            "bnfPart": "020601"
+          }, 
+          {
+            "nodeName": "Peripheral vasodilators and related drugs", 
+            "bnfPart": "020604"
+          }
+        ], 
+        "nodeName": "Nitrates, calcium-channel blockers, and other antianginal drugs", 
+        "bnfPart": "0206"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Vasoconstrictor sympathomimetics", 
+            "bnfPart": "020702"
+          }, 
+          {
+            "nodeName": "Cardiopulmonary resuscitation", 
+            "bnfPart": "020703"
+          }, 
+          {
+            "nodeName": "Inotropic sympathomimetics", 
+            "bnfPart": "020701"
+          }
+        ], 
+        "nodeName": "Sympathomimetics", 
+        "bnfPart": "0207"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Beta-adrenoceptor blocking drugs", 
+        "bnfPart": "0204"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Centrally acting antihypertensive drugs", 
+            "bnfPart": "020502"
+          }, 
+          {
+            "nodeName": "Adrenergic neurone blocking drugs", 
+            "bnfPart": "020503"
+          }, 
+          {
+            "nodeName": "Vasodilator antihypertensive drugs", 
+            "bnfPart": "020501"
+          }, 
+          {
+            "nodeName": "Alpha-adrenoceptor blocking drugs", 
+            "bnfPart": "020504"
+          }, 
+          {
+            "nodeName": "Drugs affecting the renin-angiotensin system", 
+            "bnfPart": "020505"
+          }
+        ], 
+        "nodeName": "Hypertension and heart failure", 
+        "bnfPart": "0205"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Loop diuretics", 
+            "bnfPart": "020202"
+          }, 
+          {
+            "nodeName": "Potassium-sparing diuretics and aldosterone antagonists", 
+            "bnfPart": "020203"
+          }, 
+          {
+            "nodeName": "Thiazides and related diuretics", 
+            "bnfPart": "020201"
+          }, 
+          {
+            "nodeName": "Carbonic anhydrase inhibitors", 
+            "bnfPart": "020207"
+          }, 
+          {
+            "nodeName": "Potassium-sparing diuretics with other diuretics", 
+            "bnfPart": "020204"
+          }, 
+          {
+            "nodeName": "Osmotic diuretics", 
+            "bnfPart": "020205"
+          }
+        ], 
+        "nodeName": "Diuretics", 
+        "bnfPart": "0202"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Oral anticoagulants", 
+            "bnfPart": "020802"
+          }, 
+          {
+            "nodeName": "Protamine sulphate", 
+            "bnfPart": "020803"
+          }, 
+          {
+            "nodeName": "Parenteral anticoagulants", 
+            "bnfPart": "020801"
+          }
+        ], 
+        "nodeName": "Anticoagulants and protamine", 
+        "bnfPart": "0208"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Antiplatelet drugs", 
+        "bnfPart": "0209"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Lipid-regulating drugs", 
+        "bnfPart": "0212"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Drugs for arrhythmias", 
+            "bnfPart": "020302"
+          }, 
+          {
+            "nodeName": "Management of arrhythmias", 
+            "bnfPart": "020301"
+          }
+        ], 
+        "nodeName": "Anti-arrhythmic drugs", 
+        "bnfPart": "0203"
+      }
+    ], 
+    "nodeName": "Cardiovascular system", 
+    "bnfPart": "02"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Barrier preparations", 
+            "bnfPart": "130202"
+          }, 
+          {
+            "nodeName": "Emollients", 
+            "bnfPart": "130201"
+          }
+        ], 
+        "nodeName": "Emollient and barrier preparations", 
+        "bnfPart": "1302"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Topical local anaesthetics and antipruritics", 
+        "bnfPart": "1303"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Topical circulatory preparations", 
+        "bnfPart": "1313"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Management of skin conditions", 
+        "bnfPart": "1301"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Oral preparations for acne", 
+            "bnfPart": "130602"
+          }, 
+          {
+            "nodeName": "Topical preparations for acne", 
+            "bnfPart": "130601"
+          }
+        ], 
+        "nodeName": "Acne and rosacea", 
+        "bnfPart": "1306"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Bandages and adhesives", 
+            "bnfPart": "131402"
+          }, 
+          {
+            "nodeName": "Elastic hosiery", 
+            "bnfPart": "131403"
+          }, 
+          {
+            "nodeName": "Wound dressings", 
+            "bnfPart": "131401"
+          }
+        ], 
+        "nodeName": "Wound management products and Elastic Hosiery (BNF Appendix 8)", 
+        "bnfPart": "1314"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Topical corticosteroids", 
+        "bnfPart": "1304"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Preparations for psoriasis", 
+            "bnfPart": "130502"
+          }, 
+          {
+            "nodeName": "Drugs affecting the immune response", 
+            "bnfPart": "130503"
+          }, 
+          {
+            "nodeName": "Preparations for eczema", 
+            "bnfPart": "130501"
+          }
+        ], 
+        "nodeName": "Preparations for eczema and psoriasis", 
+        "bnfPart": "1305"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Camouflagers", 
+            "bnfPart": "130802"
+          }, 
+          {
+            "nodeName": "Sunscreen preparations", 
+            "bnfPart": "130801"
+          }
+        ], 
+        "nodeName": "Sunscreens and camouflagers", 
+        "bnfPart": "1308"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Shampoos and other preparations for scalp and hair conditions", 
+        "bnfPart": "1309"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Antifungal preparations", 
+            "bnfPart": "131002"
+          }, 
+          {
+            "nodeName": "Antiviral preparations", 
+            "bnfPart": "131003"
+          }, 
+          {
+            "nodeName": "Antibacterial preparations", 
+            "bnfPart": "131001"
+          }, 
+          {
+            "nodeName": "Parasiticidal preparations", 
+            "bnfPart": "131004"
+          }, 
+          {
+            "nodeName": "Preparations for minor cuts and abrasions", 
+            "bnfPart": "131005"
+          }
+        ], 
+        "nodeName": "Anti-infective skin preparations", 
+        "bnfPart": "1310"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Antiperspirants", 
+        "bnfPart": "1312"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Chlorhexidine salts", 
+            "bnfPart": "131102"
+          }, 
+          {
+            "nodeName": "Alcohols and saline", 
+            "bnfPart": "131101"
+          }, 
+          {
+            "nodeName": "Preparations for promotion of wound healing", 
+            "bnfPart": "131107"
+          }, 
+          {
+            "nodeName": "Iodine", 
+            "bnfPart": "131104"
+          }
+        ], 
+        "nodeName": "Skin cleansers, antiseptics, and preparations for promotion of wound healing", 
+        "bnfPart": "1311"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Preparations for warts and calluses", 
+        "bnfPart": "1307"
+      }
+    ], 
+    "nodeName": "Skin", 
+    "bnfPart": "13"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [], 
+        "nodeName": "Antispasmodics and other drugs altering gut motility", 
+        "bnfPart": "0102"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Selective antimuscarinics", 
+            "bnfPart": "010302"
+          }, 
+          {
+            "nodeName": "Chelates and complexes", 
+            "bnfPart": "010303"
+          }, 
+          {
+            "nodeName": "H2-receptor antagonists", 
+            "bnfPart": "010301"
+          }, 
+          {
+            "nodeName": "Prostaglandin analogues", 
+            "bnfPart": "010304"
+          }, 
+          {
+            "nodeName": "Proton pump inhibitors", 
+            "bnfPart": "010305"
+          }
+        ], 
+        "nodeName": "Antisecretory drugs and mucosal protectants", 
+        "bnfPart": "0103"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Compound alginates and proprietary indigestion preparations", 
+            "bnfPart": "010102"
+          }, 
+          {
+            "nodeName": "Antacids and simeticone", 
+            "bnfPart": "010101"
+          }
+        ], 
+        "nodeName": "Dyspepsia and gastro-oesophageal reflux disease", 
+        "bnfPart": "0101"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Stimulant laxatives", 
+            "bnfPart": "010602"
+          }, 
+          {
+            "nodeName": "Faecal softeners", 
+            "bnfPart": "010603"
+          }, 
+          {
+            "nodeName": "Bulk-forming laxatives", 
+            "bnfPart": "010601"
+          }, 
+          {
+            "nodeName": "5HT4 receptor agonists", 
+            "bnfPart": "010607"
+          }, 
+          {
+            "nodeName": "Osmotic laxatives", 
+            "bnfPart": "010604"
+          }, 
+          {
+            "nodeName": "Bowel cleansing preparations", 
+            "bnfPart": "010605"
+          }
+        ], 
+        "nodeName": "Laxatives", 
+        "bnfPart": "0106"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Compound haemorrhoidal preparations with corticosteroids", 
+            "bnfPart": "010702"
+          }, 
+          {
+            "nodeName": "Rectal sclerosants", 
+            "bnfPart": "010703"
+          }, 
+          {
+            "nodeName": "Soothing haemorrhoidal preparations", 
+            "bnfPart": "010701"
+          }, 
+          {
+            "nodeName": "Management of anal fissures", 
+            "bnfPart": "010704"
+          }
+        ], 
+        "nodeName": "Local preparations for anal and rectal disorders", 
+        "bnfPart": "0107"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Antimotility drugs", 
+            "bnfPart": "010402"
+          }, 
+          {
+            "nodeName": "Adsorbents and bulk-forming drugs", 
+            "bnfPart": "010401"
+          }
+        ], 
+        "nodeName": "Acute diarrhoea", 
+        "bnfPart": "0104"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Corticosteroids", 
+            "bnfPart": "010502"
+          }, 
+          {
+            "nodeName": "Drugs affecting the immune response", 
+            "bnfPart": "010503"
+          }, 
+          {
+            "nodeName": "Aminosalicylates", 
+            "bnfPart": "010501"
+          }
+        ], 
+        "nodeName": "Chronic bowel disorders", 
+        "bnfPart": "0105"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Stoma care", 
+        "bnfPart": "0108"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Drugs affecting biliary composition and flow", 
+            "bnfPart": "010901"
+          }, 
+          {
+            "nodeName": "Pancreatin", 
+            "bnfPart": "010904"
+          }
+        ], 
+        "nodeName": "Drugs affecting intestinal secretions", 
+        "bnfPart": "0109"
+      }
+    ], 
+    "nodeName": "Gastro-intestinal system", 
+    "bnfPart": "01"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Parenteral preparations for fluid and electrolyte imbalance", 
+            "bnfPart": "090202"
+          }, 
+          {
+            "nodeName": "Oral preparations for fluid and electrolyte imbalance", 
+            "bnfPart": "090201"
+          }
+        ], 
+        "nodeName": "Fluids and electrolytes", 
+        "bnfPart": "0902"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Intravenous nutrition", 
+        "bnfPart": "0903"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Drugs used in megaloblastic anaemias", 
+            "bnfPart": "090102"
+          }, 
+          {
+            "nodeName": "Drugs used in hypoplastic, haemolytic, and renal anaemias", 
+            "bnfPart": "090103"
+          }, 
+          {
+            "nodeName": "Iron-deficiency anaemias", 
+            "bnfPart": "090101"
+          }, 
+          {
+            "nodeName": "Drugs used in neutropenia", 
+            "bnfPart": "090106"
+          }, 
+          {
+            "nodeName": "Drugs used to mobilise stem cells", 
+            "bnfPart": "090107"
+          }, 
+          {
+            "nodeName": "Drugs used in platelet disorders", 
+            "bnfPart": "090104"
+          }
+        ], 
+        "nodeName": "Anaemias and some other blood disorders", 
+        "bnfPart": "0901"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Vitamin B group", 
+            "bnfPart": "090602"
+          }, 
+          {
+            "nodeName": "Vitamin C", 
+            "bnfPart": "090603"
+          }, 
+          {
+            "nodeName": "Vitamin A", 
+            "bnfPart": "090601"
+          }, 
+          {
+            "nodeName": "Vitamin K", 
+            "bnfPart": "090606"
+          }, 
+          {
+            "nodeName": "Multivitamin preparations", 
+            "bnfPart": "090607"
+          }, 
+          {
+            "nodeName": "Vitamin D", 
+            "bnfPart": "090604"
+          }, 
+          {
+            "nodeName": "Vitamin E", 
+            "bnfPart": "090605"
+          }
+        ], 
+        "nodeName": "Vitamins", 
+        "bnfPart": "0906"
+      }, 
+      {
+        "nodes": [], 
+        "nodeName": "Bitters and tonics", 
+        "bnfPart": "0907"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Enteral nutrition", 
+            "bnfPart": "090402"
+          }, 
+          {
+            "nodeName": "Foods for special diets", 
+            "bnfPart": "090401"
+          }
+        ], 
+        "nodeName": "Oral nutrition", 
+        "bnfPart": "0904"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Phosphorus", 
+            "bnfPart": "090502"
+          }, 
+          {
+            "nodeName": "Fluoride", 
+            "bnfPart": "090503"
+          }, 
+          {
+            "nodeName": "Calcium and magnesium", 
+            "bnfPart": "090501"
+          }, 
+          {
+            "nodeName": "Zinc", 
+            "bnfPart": "090504"
+          }, 
+          {
+            "nodeName": "Selenium", 
+            "bnfPart": "090505"
+          }
+        ], 
+        "nodeName": "Minerals", 
+        "bnfPart": "0905"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Acute porphyrias", 
+            "bnfPart": "090802"
+          }, 
+          {
+            "nodeName": "Drugs used in metabolic disorders", 
+            "bnfPart": "090801"
+          }
+        ], 
+        "nodeName": "Metabolic disorders", 
+        "bnfPart": "0908"
+      }
+    ], 
+    "nodeName": "Nutrition and blood", 
+    "bnfPart": "09"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Vaginal and vulval infections", 
+            "bnfPart": "070202"
+          }, 
+          {
+            "nodeName": "Preparations for vaginal and vulval changes", 
+            "bnfPart": "070201"
+          }
+        ], 
+        "nodeName": "Treatment of vaginal and vulval conditions", 
+        "bnfPart": "0702"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Progestogen-only contraceptives", 
+            "bnfPart": "070302"
+          }, 
+          {
+            "nodeName": "Spermicidal contraceptives", 
+            "bnfPart": "070303"
+          }, 
+          {
+            "nodeName": "Combined hormonal contraceptives", 
+            "bnfPart": "070301"
+          }, 
+          {
+            "nodeName": "Contraceptive devices", 
+            "bnfPart": "070304"
+          }, 
+          {
+            "nodeName": "Emergency contraception", 
+            "bnfPart": "070305"
+          }
+        ], 
+        "nodeName": "Contraceptives", 
+        "bnfPart": "0703"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Mifepristone", 
+            "bnfPart": "070102"
+          }, 
+          {
+            "nodeName": "Myometrial relaxants", 
+            "bnfPart": "070103"
+          }, 
+          {
+            "nodeName": "Prostaglandins and oxytocics", 
+            "bnfPart": "070101"
+          }
+        ], 
+        "nodeName": "Drugs used in obstetrics", 
+        "bnfPart": "0701"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Drugs for urinary frequency, enuresis, and incontinence", 
+            "bnfPart": "070402"
+          }, 
+          {
+            "nodeName": "Drugs used in urological pain", 
+            "bnfPart": "070403"
+          }, 
+          {
+            "nodeName": "Drugs for urinary retention", 
+            "bnfPart": "070401"
+          }, 
+          {
+            "nodeName": "Bladder instillations and urological surgery", 
+            "bnfPart": "070404"
+          }, 
+          {
+            "nodeName": "Drugs for erectile dysfunction", 
+            "bnfPart": "070405"
+          }
+        ], 
+        "nodeName": "Drugs for genito-urinary disorders", 
+        "bnfPart": "0704"
+      }
+    ], 
+    "nodeName": "Obstetrics, gynaecology, and urinary-tract disorders", 
+    "bnfPart": "07"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Antithyroid drugs", 
+            "bnfPart": "060202"
+          }, 
+          {
+            "nodeName": "Thyroid hormones", 
+            "bnfPart": "060201"
+          }
+        ], 
+        "nodeName": "Thyroid and antithyroid drugs", 
+        "bnfPart": "0602"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Glucocorticoid therapy", 
+            "bnfPart": "060302"
+          }, 
+          {
+            "nodeName": "Replacement therapy", 
+            "bnfPart": "060301"
+          }
+        ], 
+        "nodeName": "Corticosteroids", 
+        "bnfPart": "0603"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Antidiabetic drugs", 
+            "bnfPart": "060102"
+          }, 
+          {
+            "nodeName": "Diabetic ketoacidosis", 
+            "bnfPart": "060103"
+          }, 
+          {
+            "nodeName": "Insulins", 
+            "bnfPart": "060101"
+          }, 
+          {
+            "nodeName": "Diagnostic and monitoring devices for diabetes mellitus", 
+            "bnfPart": "060106"
+          }, 
+          {
+            "nodeName": "Treatment of hypoglycaemia", 
+            "bnfPart": "060104"
+          }, 
+          {
+            "nodeName": "Treatment of diabetic nephropathy and neuropathy", 
+            "bnfPart": "060105"
+          }
+        ], 
+        "nodeName": "Drugs used in diabetes", 
+        "bnfPart": "0601"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Bisphosphonates and other drugs affecting bone metabolism", 
+            "bnfPart": "060602"
+          }, 
+          {
+            "nodeName": "Calcitonin and parathyroid hormone (contains Preotact entry)", 
+            "bnfPart": "060601"
+          }
+        ], 
+        "nodeName": "Drugs affecting bone metabolism", 
+        "bnfPart": "0606"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Drugs affecting gonadotrophins", 
+            "bnfPart": "060702"
+          }, 
+          {
+            "nodeName": "Metyrapone and trilostane", 
+            "bnfPart": "060703"
+          }, 
+          {
+            "nodeName": "Bromocriptine and other dopaminergic drugs", 
+            "bnfPart": "060701"
+          }, 
+          {
+            "nodeName": "Somatomedins", 
+            "bnfPart": "060704"
+          }
+        ], 
+        "nodeName": "Other endocrine drugs", 
+        "bnfPart": "0607"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Male sex hormones and antagonists", 
+            "bnfPart": "060402"
+          }, 
+          {
+            "nodeName": "Anabolic steroids", 
+            "bnfPart": "060403"
+          }, 
+          {
+            "nodeName": "Female sex hormones", 
+            "bnfPart": "060401"
+          }
+        ], 
+        "nodeName": "Sex hormones", 
+        "bnfPart": "0604"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Posterior pituitary hormones and antagonists", 
+            "bnfPart": "060502"
+          }, 
+          {
+            "nodeName": "Hypothalamic and anterior pituitary hormones and anti-oestrogens", 
+            "bnfPart": "060501"
+          }
+        ], 
+        "nodeName": "Hypothalamic and pituitary hormones and anti-oestrogens", 
+        "bnfPart": "0605"
+      }
+    ], 
+    "nodeName": "Endocrine system", 
+    "bnfPart": "06"
+  }, 
+  {
+    "nodes": [
+      {
+        "nodes": [
+          {
+            "nodeName": "Skeletal muscle relaxants", 
+            "bnfPart": "100202"
+          }, 
+          {
+            "nodeName": "Drugs that enhance neuromuscular transmission", 
+            "bnfPart": "100201"
+          }
+        ], 
+        "nodeName": "Drugs used in neuromuscular disorders", 
+        "bnfPart": "1002"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Rubefacients, topical NSAIDs, capsaicin, and poultices", 
+            "bnfPart": "100302"
+          }, 
+          {
+            "nodeName": "Enzymes", 
+            "bnfPart": "100301"
+          }
+        ], 
+        "nodeName": "Drugs for the relief of soft-tissue inflammation and topical pain relief", 
+        "bnfPart": "1003"
+      }, 
+      {
+        "nodes": [
+          {
+            "nodeName": "Corticosteroids", 
+            "bnfPart": "100102"
+          }, 
+          {
+            "nodeName": "Drugs that suppress the rheumatic disease process", 
+            "bnfPart": "100103"
+          }, 
+          {
+            "nodeName": "Non-steroidal anti-inflammatory drugs", 
+            "bnfPart": "100101"
+          }, 
+          {
+            "nodeName": "Gout and cytotoxic-induced hyperuricaemia", 
+            "bnfPart": "100104"
+          }, 
+          {
+            "nodeName": "Other drugs for rheumatic diseases", 
+            "bnfPart": "100105"
+          }
+        ], 
+        "nodeName": "Drugs used in rheumatic diseases and gout", 
+        "bnfPart": "1001"
+      }
+    ], 
+    "nodeName": "Musculoskeletal and joint diseases", 
+    "bnfPart": "10"
+  }
+]

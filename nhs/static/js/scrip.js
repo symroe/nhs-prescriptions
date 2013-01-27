@@ -54,8 +54,8 @@
             return true;
         },
 
-        practice = {},
-        ccg = {}
+        practice: {},
+        ccg: {}
 
     }
 
