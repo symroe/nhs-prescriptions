@@ -64,9 +64,14 @@
         var map = options.map
 
         $.ajax(
-            '/api/v1/some/field/',
+            '/api/v1/prescriptioncomparison/',
             {
-                data: {},
+                data: {
+                    format: 'json',
+                    group1: naughty.join(),
+                    group2: nice.join(),
+                    query_type: 'ccg'
+                },
                 success: function(data){
 
                     var features = _.map(
@@ -116,17 +121,24 @@
                 success: function(bucketdata){
 
                     $.ajax(
-                        '/api/v1/practicelist',
+                        '/api/v1/practice',
                         {
-                            data: {},
+                            data: {
+                                'format': 'json',
+                                'limit': 0
+                            },
                             success: function(practicedata){
                                 var markers = new L.MarkerClusterGroup({disableClusterAtZoom: 14});
 
-                                var practiceScrips = _.pairs(data);
+                                _.each(practicedata, function(practice){
+                                    var marker1 = L.marker([practice.location.lat, practice.location.lng]);
+                                     = bucketata
+                                    marker1.bindPopup()
+                                    markers.addLayer(marker1)
 
-                                var marker1 = L.marker([54.561219329,-1.31880684345]);
-                                marker1.bindPopup("<b>THE DENSHAM SURGERY</b> (A81001)<br>28.6% statins proprietary<br>356 statin items per month prescribed")
-                                markers.addLayer(marker1);
+                                })
+
+                                var practiceScrips = _.pairs(data);
 //http://localhost:4567/api/v1/practice/?format=json&limit=0
 
                             }
