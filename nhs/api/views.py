@@ -1,4 +1,9 @@
 """
+NOTE: This has been replaced with tastypie.
+
+Should be removed at some point, but leaving it here for the time being.
+
+
 Serve views for our API callsn
 
 Notes:

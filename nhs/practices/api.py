@@ -6,4 +6,3 @@ from models import Practice
 class PracticeResource(GeoModelResource):
     class Meta:
             model = Practice
-            resource_name = 'practice'

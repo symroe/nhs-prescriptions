@@ -2,6 +2,7 @@
 from django.db import models
 
 from practices.models import Practice
+from managers import PrescriptionManager
 
 class Product(models.Model):
     """
@@ -14,6 +15,7 @@ class Product(models.Model):
         return "<Product {0}>".format(self.name)
 
 class Prescription(models.Model):
+    
     """
     A month, practice granularity record of prescriptions of specific
     products.
@@ -24,6 +26,9 @@ class Prescription(models.Model):
     nic         = models.FloatField()
     actual_cost = models.FloatField()
     period      = models.IntegerField(blank=True, null=True, db_index=True)
+
+    objects = PrescriptionManager()
+    
     def __repr__(self):
         return "<Presciption {0} X {1}>".format(self.product.name, self.quantity)
 

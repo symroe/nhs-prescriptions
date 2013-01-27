@@ -1,23 +1,25 @@
-"""
-This file demonstrates two different styles of tests (one doctest and one
-unittest). These will both pass when you run "manage.py test".
-
-Replace these with more appropriate tests for your application.
-"""
-
 from django.test import TestCase
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.failUnlessEqual(1 + 1, 2)
+from tastypie.test import ResourceTestCase
 
-__test__ = {"doctest": """
-Another way to test that 1 + 1 is equal to 2.
+class ProductResourceTest(ResourceTestCase):
+    fixtures = ['Product.json',]
+    def test_filter_bnf_code(self):
+        resp = self.api_client.get('/api/v1/product/?bnf_code__startswith=01', format='json')
+        self.assertValidJSONResponse(resp)
+        self.assertKeys(self.deserialize(resp), ['meta', 'objects'])
+        self.assertEqual(self.deserialize(resp)['meta']['total_count'], 10)
+    
 
->>> 1 + 1 == 2
-True
-"""}
+
+class PrescriptionTests(TestCase):
+    fixtures = ['Product.json',]
+
+    def test_prescription_aggregate(self):
+        
+        bnf_ids_1 = []
+        
+        
+
+
 

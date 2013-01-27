@@ -91,7 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.gis',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'south',
+    # 'south',
     'django_extensions',
     'mapit',
     'prescriptions',
@@ -111,3 +111,6 @@ try:
 except:
     pass
 
+
+
+# TEST_RUNNER = 'django.contrib.gis.tests.GeoDjangoTestSuiteRunner'

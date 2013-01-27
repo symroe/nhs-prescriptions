@@ -10,23 +10,16 @@ from django.views.generic import TemplateView
 
 from nhs.nice.models import Recommendation
 
-# API
-from tastypie.api import Api
-v1_api = Api(api_name='v1')
-from practices.api import PracticeResource
-v1_api.register(PracticeResource())
-
-
-
 def getrecs():
     return Recommendation.objects.all()[0]
 
 urlpatterns = patterns(
     '',
     url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
+
     # API
-    # url(r'^api/', include('nhs.api.urls')),
-    (r'^api/', include(v1_api.urls)),
+    url(r'^api/', include('nhs.api.urls')),
+
     
     # Examples
     url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
