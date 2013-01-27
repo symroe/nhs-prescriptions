@@ -1,0 +1,80 @@
+[
+    {
+        "pk": "0703010F0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Combined Ethinylestradiol 30mcg"
+        }
+    },
+    {
+        "pk": "0101010G0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Co-Magaldrox(Magnesium/Aluminium Hydrox)"
+        }
+    },
+    {
+        "pk": "0101010P0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Co-Simalcite (Simeticone/Hydrotalcite)"
+        }
+    },
+    {
+        "pk": "0101010R0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Simeticone"
+        }
+    },
+    {
+        "pk": "0101021B0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Alginic Acid Compound Preparations"
+        }
+    },
+    {
+        "pk": "0102000J0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Dicycloverine Hydrochloride"
+        }
+    },
+    {
+        "pk": "0102000N0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Hyoscine Butylbromide"
+        }
+    },
+    {
+        "pk": "0102000P0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Mebeverine Hydrochloride"
+        }
+    },
+    {
+        "pk": "0102000T0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Peppermint Oil"
+        }
+    },
+    {
+        "pk": "0102000X0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Mebeverine HCl Compound Preparations"
+        }
+    },
+    {
+        "pk": "0102000Y0",
+        "model": "prescriptions.product",
+        "fields": {
+            "name": "Propantheline Bromide"
+        }
+    }
+
+]

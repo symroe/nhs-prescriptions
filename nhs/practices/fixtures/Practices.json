@@ -1,0 +1,198 @@
+[
+    {
+        "pk": "A81002",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS18 2AW",
+            "address": "Queens Park Medical Centre\nQueens Park Medical Ctr\nFarrer Street\nStockton On Tees\nCleveland",
+            "ccg": 1,
+            "name": "A81002"
+        }
+    },
+    {
+        "pk": "A81003",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS26 8DB",
+            "address": "The Gallagher Practice\nThe Health Centre\nVictoria Road\nHartlepool\nCleveland",
+            "ccg": 1,
+            "name": "A81003"
+        }
+    },
+    {
+        "pk": "A81004",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS1 3BE",
+            "address": "Woodlands Road Surgery\n6 Woodlands Road\n\nMiddlesbrough\nCleveland",
+            "ccg": 1,
+            "name": "A81004"
+        }
+    },
+    {
+        "pk": "A81005",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS14 7DJ",
+            "address": "Springwood Surgery\nSpringwood Surgery\nRectory Lane\nGuisborough\n",
+            "ccg": 1,
+            "name": "A81005"
+        }
+    },
+    {
+        "pk": "A81007",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS24 7PW",
+            "address": "Bankhouse Surgery\nOne Life Hartlepool\nPark Road\nHartlepool\n",
+            "ccg": 1,
+            "name": "A81007"
+        }
+    },
+    {
+        "pk": "A81008",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS6 6TD",
+            "address": "Albert House Clinic\nLow Grange Health Village\nNormanby Road\nMiddlesbrough\nCleveland",
+            "ccg": 1,
+            "name": "A81008"
+        }
+    },
+    {
+        "pk": "A81009",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS5 6HF",
+            "address": "Village Medical Centre\nThe Village Medical Ctr\n400/404 Linthorpe Road\nMiddlesbrough\nCleveland",
+            "ccg": 1,
+            "name": "A81009"
+        }
+    },
+    {
+        "pk": "A81010",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS24 9DN",
+            "address": "Hart Lodge\nHart Medical Practice\nSurgery Lane\nHartlepool\nCleveland",
+            "ccg": 1,
+            "name": "A81010"
+        }
+    },
+    {
+        "pk": "A81011",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS24 7PW",
+            "address": "Chadwick Practice\nOne Life Hartlepool\nPark Road\nHartlepool\n",
+            "ccg": 1,
+            "name": "A81011"
+        }
+    },
+    {
+        "pk": "A81012",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS3 6AL",
+            "address": "Westbourne Medical Centre\nWestbourne Medical Centre\n7 Trinity Mews N. Ormesby\nMiddlesbrough\n",
+            "ccg": 1,
+            "name": "A81012"
+        }
+    },
+    {
+        "pk": "A81013",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS12 2FF",
+            "address": "Brotton Surgery\nBrotton Surgery\nAlford Road Brotton\nSaltburn By Sea\n",
+            "ccg": 1,
+            "name": "A81013"
+        }
+    },
+    {
+        "pk": "A81014",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS23 2LA",
+            "address": "Queenstree Practice\nThe Health Centre\nQueensway\nBillingham\nCleveland",
+            "ccg": 1,
+            "name": "A81014"
+        }
+    },
+    {
+        "pk": "A81015",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS10 1TZ",
+            "address": "Lagan Surgery\nLagan Surgery\n20 Kirkleatham Street\nRedcar\nCleveland",
+            "ccg": 1,
+            "name": "A81015"
+        }
+    },
+    {
+        "pk": "A81016",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS1 3QY",
+            "address": "Park Surgery\nOne Life\nLinthorpe Road\nMiddlesbrough\n",
+            "ccg": 1,
+            "name": "A81016"
+        }
+    },
+    {
+        "pk": "A81017",
+        "model": "practices.practice",
+        "fields": {
+            "imd": null,
+            "location": null,
+            "pc": null,
+            "postcode": "TS17 0EE",
+            "address": "Woodbridge Practice\nThe Health Centre\nTrenchard Ave  Thornaby\nStockton On Tees\nCleveland",
+            "ccg": 1,
+            "name": "A81017"
+        }
+    }
+
+]

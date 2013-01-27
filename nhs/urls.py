@@ -3,10 +3,10 @@ from django.conf.urls.defaults import patterns, url, include
 from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
+from django.contrib import admin
 
 #from django.contrib.gis import admin
-#admin.autodiscover()
+admin.autodiscover()
 
 from nhs.nice.models import Recommendation
 
@@ -31,7 +31,7 @@ urlpatterns = patterns(
 
 
     #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    #(r'^admin/', include(admin.site.urls)),
+    (r'^admin/', include(admin.site.urls)),
 
 )
 

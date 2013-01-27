@@ -13,6 +13,9 @@ class Product(models.Model):
     name     = models.CharField(blank=True, max_length=255, db_index=True)
     def __repr__(self):
         return "<Product {0}>".format(self.name)
+    
+    def __unicode__(self):
+        return self.pk
 
 class Prescription(models.Model):
     

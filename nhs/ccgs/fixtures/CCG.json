@@ -1,0 +1,54 @@
+[
+    {
+        "pk": 1,
+        "model": "ccgs.ccg",
+        "fields": {
+            "code": "00C",
+            "name": "nhs-darlington-ccg",
+            "title": "NHS Darlington CCG",
+            "region": "North",
+            "lsoa_count": 63,
+            "poly": "MULTIPOLYGON EMPTY",
+            "population": 105600
+        }
+    },
+    {
+        "pk": 2,
+        "model": "ccgs.ccg",
+        "fields": {
+            "code": "0.0",
+            "name": "nhs-durham-dales-easington-and-sedgefield-ccg",
+            "title": "NHS Durham Dales, Easington and Sedgefield CCG",
+            "region": "North",
+            "lsoa_count": 177,
+            "poly": "MULTIPOLYGON EMPTY",
+            "population": 287400
+        }
+    },
+    {
+        "pk": 3,
+        "model": "ccgs.ccg",
+        "fields": {
+            "code": "0.0",
+            "name": "nhs-gateshead-ccg",
+            "title": "NHS Gateshead CCG",
+            "region": "North",
+            "lsoa_count": 126,
+            "poly": "MULTIPOLYGON EMPTY",
+            "population": 205800
+        }
+    },
+    {
+        "pk": 4,
+        "model": "ccgs.ccg",
+        "fields": {
+            "code": "00G",
+            "name": "nhs-newcastle-north-and-east-ccg",
+            "title": "NHS Newcastle North and East CCG",
+            "region": "North",
+            "lsoa_count": 83,
+            "poly": "MULTIPOLYGON EMPTY",
+            "population": 152200
+        }
+    }
+]

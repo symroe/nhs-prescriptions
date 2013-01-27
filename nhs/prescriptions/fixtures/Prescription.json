@@ -1,0 +1,14 @@
+[
+    {
+        "pk": 19275981,
+        "model": "prescriptions.prescription",
+        "fields": {
+            "product": "0101010R0",
+            "nic": 123.0,
+            "practice": "A81016",
+            "period": null,
+            "actual_cost": 123.0,
+            "quantity": 1
+        }
+    }
+]
