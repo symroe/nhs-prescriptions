@@ -11,10 +11,11 @@ from practices.models import Practice
 
 class Command(BaseCommand):
     def handle(self,**options):
-        for practice in practices.models.all():
+        for practice in Practice.objects.all():
             pc = Postcode.objects.filter(postcode=practice.postcode)
             if len(pc) == 0:
-                import pdb; pdb.set_trace()
+                continue
+                print practice.postcode
             else:
                 pc = pc[0]
             practice.pc = pc

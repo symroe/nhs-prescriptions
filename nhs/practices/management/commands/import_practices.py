@@ -19,17 +19,24 @@ class ReadlineIterator:
 
 class Command(BaseCommand):
     
+    def process_line(self, line):
+        try:
+            P = Practice.objects.get(pk=line[1])
+        except Practice.DoesNotExist:
+            P = Practice(pk=line.pop(1))
+        P.name = line.pop(1).title()
+        P.postcode = line.pop()
+        P.address = "\n".join([x.title() for x in line[1:]])
+        P.save()
+        print "Saved %s" % P
+    
     def handle(self, **options):
+        seen = set()
+        
         infile = csv.reader(ReadlineIterator(sys.stdin))
         for line in infile:
             line = [x.strip() for x in line]
-            try:
-                P = Practice.objects.get(pk=line[1])
-            except Practice.DoesNotExist:
-                P = Practice(pk=line.pop(1))
-            P.name = line.pop(1).title()
-            P.postcode = line.pop()
-            P.address = "\n".join([x.title() for x in line[1:]])
-            print P
-            P.save()
-            # sys.exit()
+
+            if not line[1] in seen:
+                seen.add(line[1])
+                self.process_line(line)

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block title %}UK Statin Usage{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+</script>
+{% endblock %}
+
+{% block h1 %}
+  <h1>Nice Recommendations</h1>
+  <p>How NICE  is our prescribing? </p>
+{% endblock %}
+
+{% block content %}
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+<h2> 
+<a href="{{rec.link}}">  {{rec.guideline}}</a>
+</h2>
+{% endblock %}
+
+{% block extrascripts %}
+	  <script type="text/javascript" src="{{STATIC_URL}}js/lib/underscore.js"></script>
+          <script src="{{STATIC_URL}}js/lib/highcharts.js"></script>
+          <script src="{{STATIC_URL}}js/modules/exporting.js"></script>
+<script type="text/javascript" >
+
+$(function () {
+    var chart;
+    $(document).ready(function() {
+
+        $.getJSON(
+            '/api/group/habits/',
+            {
+                name: 'diabetes'
+            },
+            function(data, status, xhr){
+                console.log(data);
+                var categories, series;
+
+                categories = _.map(data[0].habit, function(x){return x.period});
+                series = _.map(data,
+                               function(x){
+                                   series = {name: x.name, patent:x.patent, data:
+                                             _.map(x.habit, function(y){
+                                                 return y.total
+                                             })};
+                                   if(true){
+                                       var which = categories.indexOf(parseInt({{rec.date|date:"Ym"}}, 10));
+                                       var level = series.data[which];
+                                       series.data[which] = {y: level, marker: {
+                                           symbol: 'url(http://www.highcharts.com/demo/gfx/sun.png)'
+                                       }}
+                                   };
+                                   return series
+                               });
+
+                console.log(series);
+
+                chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'container',
+                        type: 'line',
+                        marginRight: 130,
+                        marginBottom: 25
+                    },
+                    title: {
+                        text: '{{rec.drug.name}} prescriptions',
+                        x: -20 //center
+                    },
+                    subtitle: {
+                        text: 'Source: ic.nhs.uk',
+                        x: -20
+                    },
+                    xAxis: {
+                        categories: categories
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Number of prescriptions'
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#808080'
+                        }]
+                    },
+                    tooltip: {
+                        formatter: function() {
+                            if (this.series.patent){
+                                patent = 'Patent expires ' + this.series.patent;
+                            }else{
+                                patent = '';
+                            }
+                            return '<b>'+ this.series.name +'</b><br/>'+
+                                this.x +': '+ this.y +' prescriptions' + '\n' + patent;
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'top',
+                        x: -10,
+                        y: 100,
+                        borderWidth: 0
+                    },
+                    series: series
+
+                });
+            });
+
+            }
+        )
+
+});
+
+</script>
+{% endblock %}

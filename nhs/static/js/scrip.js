@@ -127,6 +127,7 @@
                                 var marker1 = L.marker([54.561219329,-1.31880684345]);
                                 marker1.bindPopup("<b>THE DENSHAM SURGERY</b> (A81001)<br>28.6% statins proprietary<br>356 statin items per month prescribed")
                                 markers.addLayer(marker1);
+//http://localhost:4567/api/v1/practice/?format=json&limit=0
 
                             }
 

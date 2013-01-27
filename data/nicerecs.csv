@@ -1,0 +1,282 @@
+Date,link,Ref,rownumber,Title,Review
+2000-03,http://guidance.nice.org.uk/TA1,TA1,0,Wisdom teeth - removal (TA1),
+2000-04,http://guidance.nice.org.uk/TA2,TA2,1,Hip disease - replacement prostheses (TA2),2011-05
+2000-05,http://guidance.nice.org.uk/TA4,TA4,2,Ischaemic heart disease - coronary artery stents (TA4) (replaced by TA71) (withdrawn),
+2000-05,http://guidance.nice.org.uk/TA3,TA3,3,Ovarian cancer - taxanes (TA3) (replaced by TA55) (withdrawn),
+2000-06,http://guidance.nice.org.uk/TA6,TA6,4,Breast cancer - taxanes (TA6) (replaced by TA30) (withdrawn),
+2000-06,http://guidance.nice.org.uk/TA5,TA5,5,Cervical cancer - liquid based cytology (TA5) (replaced by TA69) (withdrawn),
+2000-07,http://guidance.nice.org.uk/TA7,TA7,6,Dyspepsia - proton pump inhibitors (TA7) (replaced by CG17) (withdrawn),
+2000-07,http://guidance.nice.org.uk/TA8,TA8,7,Hearing disability - hearing aids (withdrawn) (TA8) (withdrawn),
+2000-08,http://guidance.nice.org.uk/TA10,TA10,8,Asthma (children under 5) - inhaler devices (TA10),
+2000-08,http://guidance.nice.org.uk/TA9,TA9,9,Diabetes (type 2) - rosiglitazone (TA9) (replaced by TA63) (withdrawn),
+2000-09,http://guidance.nice.org.uk/TA12,TA12,10,Acute coronary syndromes - glycoprotein IIb/IIIa inhibitors (TA12) (replaced by TA47) (withdrawn),
+2000-09,http://guidance.nice.org.uk/TA11,TA11,11,Arrhythmias - implantable cardioverter defibrillators (ICDs) (TA11) (replaced by TA95) (withdrawn),
+2000-10,http://guidance.nice.org.uk/TA13,TA13,12,Attention deficit hyperactivity disorder (ADHD) - methylphenidate (TA13) (replaced by TA98) (withdrawn),
+2000-10,http://guidance.nice.org.uk/TA14,TA14,13,Hepatitis C - alpha interferon and ribavirin (TA14) (replaced by TA75) (withdrawn),
+2000-11,http://guidance.nice.org.uk/TA15,TA15,14,Flu - zanamivir (TA15) (replaced by TA58) (withdrawn),
+2000-12,http://guidance.nice.org.uk/TA17,TA17,15,Colorectal cancer - laparoscopic surgery (TA17) (replaced by TA105),
+2000-12,http://guidance.nice.org.uk/TA16,TA16,16,Knee joints (defective) - autologous cartilage transplantation (TA16) (replaced by TA89) (withdrawn),
+2001-01,http://guidance.nice.org.uk/TA19,TA19,17,"Alzheimer's disease - donepezil, rivastigmine and galantamine (TA19) (replaced by TA111) (withdrawn)",
+2001-01,http://guidance.nice.org.uk/TA18,TA18,18,Hernia (inguinal) - laparoscopic surgery (TA18) (replaced by TA83) (withdrawn),
+2001-01,http://guidance.nice.org.uk/TA20,TA20,19,Motor neurone disease - riluzole (TA20),
+2001-03,http://guidance.nice.org.uk/TA21,TA21,20,Diabetes (type 2) -  pioglitazone (TA21) (replaced by TA63) (withdrawn),
+2001-03,http://guidance.nice.org.uk/TA22,TA22,21,Obesity - orlistat (TA22) (replaced by CG43) (withdrawn),
+2001-04,http://guidance.nice.org.uk/TA23,TA23,22,Brain cancer - temozolomide (TA23),
+2001-04,http://guidance.nice.org.uk/TA24,TA24,23,Wound care - debriding agents (TA24) (replaced by CG74),
+2001-05,http://guidance.nice.org.uk/TA25,TA25,24,Pancreatic cancer - gemcitabine (TA25),
+2001-06,http://guidance.nice.org.uk/TA26,TA26,25,"Lung cancer - docetaxel, paclitaxel, gemcitabine and vinorelbine (TA26) (replaced by CG24)",
+2001-07,http://guidance.nice.org.uk/TA27,TA27,26,Osteoarthritis and rheumatoid arthritis - cox II inhibitors (TA27) (replaced by CG59 and CG79) (withdrawn),
+2001-07,http://guidance.nice.org.uk/TA28,TA28,27,Ovarian cancer - topotecan (TA28) (replaced by TA91) (withdrawn),
+2001-09,http://guidance.nice.org.uk/TA29,TA29,28,Leukaemia (lymphocytic) - fludarabine (TA29),
+2001-09,http://guidance.nice.org.uk/TA30,TA30,29,Breast cancer - taxanes (review) (TA30) (replaced by CG81),
+2001-10,http://guidance.nice.org.uk/TA31,TA31,30,Obesity - sibutramine (TA31) (replaced by CG43) (withdrawn),
+2002-01,http://guidance.nice.org.uk/TA32,TA32,31,Multiple sclerosis - beta interferon and glatiramer acetate (TA32),
+2002-03,http://guidance.nice.org.uk/TA35,TA35,32,Arthritis (juvenile idiopathic) - etanercept (TA35),
+2002-03,http://guidance.nice.org.uk/TA38,TA38,33,Asthma (older children) - inhaler devices (TA38),
+2002-03,http://guidance.nice.org.uk/TA34,TA34,34,Breast cancer - trastuzumab (TA34),
+2002-03,http://guidance.nice.org.uk/TA33,TA33,35,"Colorectal cancer (advanced)  - irinotecan, oxaliplatin & raltitrexed (TA33) (replaced by TA93) (withdrawn)",
+2002-03,http://guidance.nice.org.uk/TA36,TA36,36,Rheumatoid arthritis - etanercept and infliximab (TA36) (replaced by TA130 and TA195),
+2002-03,http://guidance.nice.org.uk/TA39,TA39,37,Smoking cessation - bupropion and nicotine replacement therapy (TA39) (replaced by PH10) (withdrawn),
+2002-03,http://guidance.nice.org.uk/TA37,TA37,38,Lymphoma (follicular non-Hodgkin's) - rituximab (replaced by TA137) (TA37) (replaced by TA137) (withdrawn),
+2002-04,http://guidance.nice.org.uk/TA40,TA40,39,Crohn's disease - infliximab (TA40) (replaced by TA187),2005-05
+2002-05,http://guidance.nice.org.uk/TA42,TA42,40,Growth hormone deficiency (children) - human growth hormone (TA42) (replaced by TA188),2005-06
+2002-05,http://guidance.nice.org.uk/TA41,TA41,41,Pregnancy - routine anti-D prophylaxis for RhD-negative women (TA41) (replaced by TA156) (withdrawn),
+2002-06,http://guidance.nice.org.uk/TA44,TA44,42,Hip disease - metal on metal hip resurfacing (TA44),
+2002-06,http://guidance.nice.org.uk/TA43,TA43,43,Schizophrenia - atypical antipsychotics (TA43) (replaced by CG82),
+2002-07,http://guidance.nice.org.uk/TA46,TA46,44,Obesity (morbid) -  surgery (TA46) (replaced by CG43) (withdrawn),
+2002-07,http://guidance.nice.org.uk/TA45,TA45,45,Ovarian cancer (advanced) - pegylated liposomal doxorubicin hydrochloride (TA45) (replaced by TA91) (withdrawn),
+2002-09,http://guidance.nice.org.uk/TA47,TA47,46,Acute coronary syndromes - glycoprotein IIb/IIIa inhibitors (review) (TA47) (partially updated by CG94),
+2002-09,http://guidance.nice.org.uk/TA49,TA49,47,Central venous catheters - ultrasound locating devices (TA49),
+2002-09,http://guidance.nice.org.uk/TA48,TA48,48,Renal failure - home versus hospital haemodialysis (TA48),
+2002-10,http://guidance.nice.org.uk/TA51,TA51,49,Depression and anxiety - computerised cognitive behaviour therapy (CCBT) (TA51) (replaced by TA97) (withdrawn),
+2002-10,http://guidance.nice.org.uk/TA50,TA50,50,Leukaemia (chronic myeloid) - imatinib (TA50) (replaced by TA70) (withdrawn),
+2002-10,http://guidance.nice.org.uk/TA52,TA52,51,Myocardial infarction - thrombolysis (TA52),
+2002-12,http://guidance.nice.org.uk/TA54,TA54,52,Breast cancer - vinorelbine (TA54) (replaced by CG81),
+2002-12,http://guidance.nice.org.uk/TA53,TA53,53,Diabetes (types 1 and 2) - long acting insulin analogues (TA53),2005-11
+2003-01,http://guidance.nice.org.uk/TA55,TA55,54,Ovarian cancer - paclitaxel (review) (TA55),
+2003-02,http://guidance.nice.org.uk/TA58,TA58,55,"Flu treatment - zanamivir (review), amantadine and oseltamivir (TA58) (replaced by TA168) (withdrawn)",
+2003-02,http://guidance.nice.org.uk/TA56,TA56,56,Stress incontinence - tension-free vaginal tape (TA56) (replaced by CG40) (withdrawn),
+2003-02,http://guidance.nice.org.uk/TA57,TA57,57,Diabetes (type 1) - insulin pump therapy (TA57) (replaced by TA151) (withdrawn),
+2003-04,http://guidance.nice.org.uk/TA60,TA60,58,Diabetes (types 1 and 2) - patient education models (TA60),2006-02
+2003-04,http://guidance.nice.org.uk/TA59,TA59,59,Electroconvulsive therapy (ECT) (TA59),
+2003-05,http://guidance.nice.org.uk/TA62,TA62,60,Breast cancer - capecitabine (TA62) (replaced by CG81),
+2003-05,http://guidance.nice.org.uk/TA61,TA61,61,Colorectal cancer - capecitabine and tegafur uracil (TA61),
+2003-08,http://guidance.nice.org.uk/TA63,TA63,62,Diabetes (type 2) - glitazones (TA63) (replaced by CG66) (withdrawn),
+2003-08,http://guidance.nice.org.uk/TA64,TA64,63,Growth hormone deficiency (adults) - human growth hormone (TA64),
+2003-09,http://guidance.nice.org.uk/TA66,TA66,64,Bipolar disorder - new drugs (TA66) (replaced by CG38) (withdrawn),
+2003-09,http://guidance.nice.org.uk/TA67,TA67,65,Flu prevention - amantadine and oseltamivir (TA67) (replaced by TA158),
+2003-09,http://guidance.nice.org.uk/TA68,TA68,66,Macular degeneration (age-related) - photodynamic therapy (TA68),2012-02
+2003-09,http://guidance.nice.org.uk/TA65,TA65,67,Non-Hodgkin's lymphoma - rituximab (TA65),2006-08
+2003-10,http://guidance.nice.org.uk/TA69,TA69,68,Cervical cancer - cervical screening (review) (TA69),
+2003-10,http://guidance.nice.org.uk/TA71,TA71,69,Ischaemic heart disease - coronary artery stents (TA71),2004-11
+2003-10,http://guidance.nice.org.uk/TA70,TA70,70,Leukaemia (chronic myeloid) - imatinib (TA70) (partially updated by TA241 and TA251),2006-09
+2003-11,http://guidance.nice.org.uk/TA73,TA73,71,Angina and myocardial infarction - myocardial perfusion scintigraphy (TA73),
+2003-11,http://guidance.nice.org.uk/TA72,TA72,72,Rheumatoid arthritis - anakinra (TA72) (replaced by CG79) (withdrawn),
+2004-01,http://guidance.nice.org.uk/TA75,TA75,73,"Hepatitis C - pegylated interferons, ribavirin and alfa interferon (TA75)",
+2004-01,http://guidance.nice.org.uk/TA74,TA74,74,Trauma - fluid replacement therapy (TA74),
+2004-03,http://guidance.nice.org.uk/TA76,TA76,75,Epilepsy (adults) - newer drugs (TA76) (replaced by CG137),2006-12
+2004-04,http://guidance.nice.org.uk/TA77,TA77,76,Insomnia - newer hypnotic drugs (TA77),
+2004-04,http://guidance.nice.org.uk/TA78,TA78,77,Menstrual bleeding - fluid-filled thermal balloon and microwave endometrial ablation (TA78),
+2004-04,http://guidance.nice.org.uk/TA79,TA79,78,Epilepsy (children) - newer drugs (TA79) (replaced by CG137),2006-12
+2004-07,http://guidance.nice.org.uk/TA80,TA80,79,Acute coronary syndromes - clopidogrel (TA80),
+2004-08,http://guidance.nice.org.uk/TA82,TA82,80,Atopic dermatitis (eczema) - pimecrolimus and tacrolimus (TA82),2009-01
+2004-08,http://guidance.nice.org.uk/TA81,TA81,81,Atopic dermatitis (eczema) - topical steroids (TA81),
+2004-09,http://guidance.nice.org.uk/TA83,TA83,82,Hernia - laparoscopic surgery (review) (TA83),
+2004-09,http://guidance.nice.org.uk/TA85,TA85,83,Renal transplantation - immuno-suppressive regimens (adults) (TA85),
+2004-09,http://guidance.nice.org.uk/TA84,TA84,84,Sepsis (severe) - drotrecogin (withdrawn) (TA84) (withdrawn),
+2004-10,http://guidance.nice.org.uk/TA86,TA86,85,Gastrointestinal stromal tumours - imatinib (TA86),
+2005-01,http://guidance.nice.org.uk/TA87,TA87,86,Osteoporosis - secondary prevention (TA87) (replaced by TA161) (withdrawn),
+2005-02,http://guidance.nice.org.uk/TA88,TA88,87,Bradycardia - dual chamber pacemakers (TA88),
+2005-05,http://guidance.nice.org.uk/TA91,TA91,88,"Ovarian cancer (advanced) - paclitaxel, pegylated liposomal doxorubicin hydrochloride and topotecan (review) (TA91)",
+2005-05,http://guidance.nice.org.uk/TA89,TA89,89,Cartilage injury - autologous chondrocyte implantation (ACI) (review) (TA89),2012-01
+2005-05,http://guidance.nice.org.uk/TA90,TA90,90,Vascular disease - clopidogrel and dipyridamole (TA90) (replaced by TA210),
+2005-07,http://guidance.nice.org.uk/TA92,TA92,91,Tooth decay - HealOzone (TA92),
+2005-08,http://guidance.nice.org.uk/TA93,TA93,92,"Colorectal cancer (advanced) - irinotecan, oxaliplatin and raltitrexed (TA93) (replaced by CG131)",2008-08
+2006-01,http://guidance.nice.org.uk/TA95,TA95,93,Arrhythmia - implantable cardioverter defibrillators (ICDs) (review) (TA95),
+2006-01,http://guidance.nice.org.uk/TA94,TA94,94,Cardiovascular disease - statins (TA94),
+2006-02,http://guidance.nice.org.uk/TA97,TA97,95,Depression and anxiety - computerised cognitive behavioural therapy (CCBT) (TA97),
+2006-02,http://guidance.nice.org.uk/TA96,TA96,96,Hepatitis B (chronic) - adefovir dipivoxil and pegylated interferon alpha-2a (TA96),
+2006-03,http://guidance.nice.org.uk/TA98,TA98,97,"Attention deficit hyperactivity disorder (ADHD) - methylphenidate, atomoxetine and dexamfetamine (review) (TA98)",
+2006-04,http://guidance.nice.org.uk/TA100,TA100,98,Colon cancer (adjuvant) - capecitabine and oxaliplatin (TA100),
+2006-04,http://guidance.nice.org.uk/TA99,TA99,99,Renal transplantation - immunosuppressive regimens for children and adolescents (TA99),2009-03
+2006-06,http://guidance.nice.org.uk/TA101,TA101,100,Prostate cancer (hormone-refractory) - docetaxel (TA101),2009-06
+2006-07,http://guidance.nice.org.uk/TA102,TA102,101,Conduct disorder in children - parent-training/education programmes (TA102),
+2006-07,http://guidance.nice.org.uk/TA103,TA103,102,Psoriasis - efalizumab and etanercept (TA103),
+2006-07,http://guidance.nice.org.uk/TA104,TA104,103,Psoriatic arthritis - etanercept and infliximab (TA104) (replaced by TA199),
+2006-08,http://guidance.nice.org.uk/TA107,TA107,104,Breast cancer (early) - trastuzumab (TA107),
+2006-08,http://guidance.nice.org.uk/TA105,TA105,105,Colorectal cancer - laparoscopic surgery (review) (TA105),2009-09
+2006-08,http://guidance.nice.org.uk/TA106,TA106,106,Hepatitis C - peginterferon alfa and ribavirin (TA106),
+2006-09,http://guidance.nice.org.uk/TA109,TA109,107,Breast cancer (early) - docetaxel (TA109),
+2006-09,http://guidance.nice.org.uk/TA108,TA108,108,Breast cancer (early) - paclitaxel (TA108),
+2006-09,http://guidance.nice.org.uk/TA110,TA110,109,Follicular lymphoma - rituximab (TA110) (replaced by TA243),2009-06
+2006-11,http://guidance.nice.org.uk/TA112,TA112,110,Breast cancer (early) - hormonal treatments (TA112),2009-06
+2006-12,http://guidance.nice.org.uk/TA113,TA113,111,Diabetes (type 1 and 2) - inhaled insulin (TA113),
+2007-01,http://guidance.nice.org.uk/TA114,TA114,112,Drug misuse - methadone and buprenorphine (TA114),
+2007-01,http://guidance.nice.org.uk/TA115,TA115,113,Drug misuse - naltrexone (TA115),
+2007-01,http://guidance.nice.org.uk/TA116,TA116,114,Breast cancer - gemcitabine  (TA116),2010-01
+2007-01,http://guidance.nice.org.uk/TA118,TA118,115,Colorectal cancer (metastatic) - bevacizumab and cetuximab (TA118) (partially updated by TA242),2009-05
+2007-01,http://guidance.nice.org.uk/TA117,TA117,116,Hyperparathyroidism - cinacalcet (TA117),2009-12
+2007-02,http://guidance.nice.org.uk/TA119,TA119,117,Leukaemia (lymphocytic) - fludarabine (TA119),2009-10
+2007-05,http://guidance.nice.org.uk/TA120,TA120,118,Heart failure - cardiac resynchronisation (TA120),
+2007-06,http://guidance.nice.org.uk/TA121,TA121,119,Glioma (newly diagnosed and high grade) - carmustine implants and temozolomide (TA121),
+2007-06,http://guidance.nice.org.uk/TA122,TA122,120,Ischaemic stroke (acute) - alteplase (TA122) (replaced by TA264),
+2007-07,http://guidance.nice.org.uk/TA123,TA123,121,Smoking cessation - varenicline  (TA123),
+2007-08,http://guidance.nice.org.uk/TA127,TA127,122,Multiple sclerosis - natalizumab (TA127),
+2007-08,http://guidance.nice.org.uk/TA126,TA126,123,Rheumatoid arthritis (refractory) - rituximab (TA126) (replaced by TA195),2010-07
+2007-08,http://guidance.nice.org.uk/TA125,TA125,124,Psoriatic arthritis (moderate to severe) - adalimumab (TA125) (replaced by TA199),
+2007-08,http://guidance.nice.org.uk/TA124,TA124,125,Lung cancer (non-small-cell) - pemetrexed  (TA124),2010-01
+2007-09,http://guidance.nice.org.uk/TA111,TA111,126,"Alzheimer's disease - donepezil, galantamine, rivastigmine (review) and memantine (TA111)",
+2007-09,http://guidance.nice.org.uk/TA128,TA128,127,Haemorrhoid - stapled haemorroidopexy (TA128),
+2007-10,http://guidance.nice.org.uk/TA129,TA129,128,Multiple myeloma - bortezomib (TA129),2012-02
+2007-10,http://guidance.nice.org.uk/TA130,TA130,129,"Rheumatoid arthritis - adalimumab, etanercept and infliximab (TA130)",2010-09
+2007-11,http://guidance.nice.org.uk/TA132,TA132,130,Hypercholesterolaemia - ezetimibe (TA132),2011-10
+2007-11,http://guidance.nice.org.uk/TA133,TA133,131,Asthma (uncontrolled) - omalizumab (TA133),
+2007-11,http://guidance.nice.org.uk/TA131,TA131,132,Asthma (in children) - corticosteroids  (TA131),2012-11
+2008-01,http://guidance.nice.org.uk/TA134,TA134,133,Psoriasis - infliximab (TA134),2008-10
+2008-01,http://guidance.nice.org.uk/TA135,TA135,134,Mesothelioma - pemetrexed disodium (TA135),
+2008-02,http://guidance.nice.org.uk/TA136,TA136,135,Structural neuroimaging in first-episode psychosis (TA136),
+2008-02,http://guidance.nice.org.uk/TA137,TA137,136,Lymphoma (follicular non-Hodgkin's) - rituximab (TA137),
+2008-03,http://guidance.nice.org.uk/TA138,TA138,137,Asthma (in adults) - corticosteroids  (TA138),2012-11
+2008-03,http://guidance.nice.org.uk/TA139,TA139,138,Sleep apnoea - continuous positive airway pressure (CPAP) (TA139),
+2008-04,http://guidance.nice.org.uk/TA141,TA141,139,Rheumatoid arthritis (refractory) - abatacept (TA141) (replaced by TA195),2010-07
+2008-04,http://guidance.nice.org.uk/TA140,TA140,140,Ulcerative colitis (subacute manifestations) - infliximab  (TA140),
+2008-05,http://guidance.nice.org.uk/TA143,TA143,141,"Ankylosing spondylitis - adalimumab, etanercept and infliximab (TA143)",
+2008-05,http://guidance.nice.org.uk/TA142,TA142,142,Anaemia (cancer-treatment induced) - erythropoietin (alpha and beta) and darbepoetin (TA142),
+2008-06,http://guidance.nice.org.uk/TA147,TA147,143,Breast cancer (advanced & metastatic) - bevacizumab (withdrawn) (TA147),
+2008-06,http://guidance.nice.org.uk/TA150,TA150,144,Colorectal cancer (metastatic) - cetuximab (terminated appraisal) (TA150) (replaced by TA242),
+2008-06,http://guidance.nice.org.uk/TA149,TA149,145,Glioma (recurrent) - carmustine implants (terminated appraisal) (TA149),
+2008-06,http://guidance.nice.org.uk/TA148,TA148,146,Lung cancer (non-small-cell) - bevacizumab (terminated appraisal) (TA148),
+2008-06,http://guidance.nice.org.uk/TA146,TA146,147,Psoriasis - adalimumab (TA146),2008-07
+2008-06,http://guidance.nice.org.uk/TA144,TA144,148,Obesity - rimonabant (withdrawn) (TA144) (withdrawn),2010-04
+2008-06,http://guidance.nice.org.uk/TA145,TA145,149,Head and neck cancer - cetuximab  (TA145),
+2008-07,http://guidance.nice.org.uk/TA151,TA151,150,Diabetes - insulin pump therapy  (TA151),
+2008-07,http://guidance.nice.org.uk/TA152,TA152,151,Coronary artery disease - drug-eluting stents (TA152),
+2008-08,http://guidance.nice.org.uk/TA153,TA153,152,Hepatitis B - entecavir  (TA153),2012-03
+2008-08,http://guidance.nice.org.uk/TA154,TA154,153,Hepatitis B - telbivudine  (TA154),2012-03
+2008-08,http://guidance.nice.org.uk/TA156,TA156,154,Pregnancy (rhesus negative women) - routine anti-D (review) (TA156),
+2008-08,http://guidance.nice.org.uk/TA155,TA155,155,Macular degeneration (age-related) - ranibizumab and pegaptanib (TA155),2014-02
+2008-09,http://guidance.nice.org.uk/TA157,TA157,156,Venous thromboembolism - dabigatran  (TA157),
+2008-09,http://guidance.nice.org.uk/TA158,TA158,157,"Influenza (prophylaxis) - amantadine, oseltamivir and zanamivir (TA158)",2011-09
+2008-10,http://guidance.nice.org.uk/TA159,TA159,158,Pain (chronic neuropathic or ischaemic) - spinal cord stimulation  (TA159),2011-11
+2008-11,http://guidance.nice.org.uk/TA165,TA165,159,Organ preservation (renal) - machine perfusion and static storage (TA165),
+2008-11,http://guidance.nice.org.uk/TA162,TA162,160,Lung cancer (non-small-cell) - erlotinib  (TA162),2010-06
+2008-12,http://guidance.nice.org.uk/TA163,TA163,161,Ulcerative colitis (acute exacerbations) - infliximab  (TA163),
+2008-12,http://guidance.nice.org.uk/TA164,TA164,162,Hyperuricaemia - febuxostat  (TA164),
+2009-01,http://guidance.nice.org.uk/TA166,TA166,163,Hearing impairment - cochlear implants (TA166),
+2009-02,http://guidance.nice.org.uk/TA167,TA167,164,"Abdominal aortic aneurysm - endovascular stent-grafts
+ (TA167)",2012-01
+2009-02,http://guidance.nice.org.uk/TA168,TA168,165,"Influenza - zanamivir, amantadine and oseltamivir (review) (TA168)",2013-11
+2009-03,http://guidance.nice.org.uk/TA169,TA169,166,Renal cell carcinoma - sunitinib (TA169),2011-02
+2009-04,http://guidance.nice.org.uk/TA170,TA170,167,Venous thromboembolism - rivaroxaban (TA170),2012-02
+2009-06,http://guidance.nice.org.uk/TA171,TA171,168,Multiple myeloma - lenalidomide (TA171),2012-02
+2009-06,http://guidance.nice.org.uk/TA172,TA172,169,Head and neck cancer (squamous cell carcinoma) - cetuximab (TA172),2012-06
+2009-07,http://guidance.nice.org.uk/TA175,TA175,170,"Lung cancer (non-small-cell, second line) - gefitinib (terminated appraisal) (TA175)",
+2009-07,http://guidance.nice.org.uk/TA174,TA174,171,"Leukaemia (chronic lymphocytic, first line) - rituximab (TA174)",
+2009-07,http://guidance.nice.org.uk/TA173,TA173,172,Hepatitis B - tenofovir disoproxil fumarate (TA173),2012-03
+2009-08,http://guidance.nice.org.uk/TA177,TA177,173,Eczema (chronic) - alitretinoin  (TA177),2012-08
+2009-08,http://guidance.nice.org.uk/TA178,TA178,174,Renal cell carcinoma  (TA178),2011-06
+2009-08,http://guidance.nice.org.uk/TA176,TA176,175,Colorectal cancer (first line) - cetuximab (TA176),2012-08
+2009-09,http://guidance.nice.org.uk/TA179,TA179,176,Gastrointestinal stromal tumours - sunitinib (TA179),2011-08
+2009-09,http://guidance.nice.org.uk/TA180,TA180,177,Psoriasis - ustekinumab  (TA180),2010-01
+2009-09,http://guidance.nice.org.uk/TA181,TA181,178,"Lung cancer (non-small-cell, first line treatment) - pemetrexed  (TA181)",
+2009-10,http://guidance.nice.org.uk/TA182,TA182,179,Acute coronary syndrome - prasugrel (TA182),2012-01
+2009-10,http://guidance.nice.org.uk/TA183,TA183,180,Cervical cancer (recurrent) - topotecan  (TA183),2012-09
+2009-11,http://guidance.nice.org.uk/TA184,TA184,181,Lung cancer (small-cell) - topotecan (TA184),2012-11
+2010-02,http://guidance.nice.org.uk/TA185,TA185,182,Soft tissue sarcoma - trabectedin (TA185),2013-02
+2010-02,http://guidance.nice.org.uk/TA186,TA186,183,Rheumatoid arthritis - certolizumab pegol (TA186),2010-09
+2010-05,http://guidance.nice.org.uk/TA187,TA187,184,Crohn's disease - infliximab (review) and adalimumab (review of TA40) (TA187),
+2010-05,http://guidance.nice.org.uk/TA189,TA189,185,Hepatocellular carcinoma (advanced and metastatic) - sorafenib (first line) (TA189),2012-11
+2010-05,http://guidance.nice.org.uk/TA188,TA188,186,Human growth hormone (somatropin) for the treatment of growth failure in children (review) (TA188),2013-05
+2010-06,http://guidance.nice.org.uk/TA190,TA190,187,Lung cancer (non-small-cell) - pemetrexed (maintenance) (TA190),
+2010-07,http://guidance.nice.org.uk/TA194,TA194,188,Bone loss (therapy-induced) in non-metastatic prostate cancer - denosumab (terminated appraisal) (TA194),
+2010-07,http://guidance.nice.org.uk/TA191,TA191,189,Gastric cancer (advanced) - capecitabine (TA191),2013-05
+2010-07,http://guidance.nice.org.uk/TA193,TA193,190,"Leukaemia (chronic lymphocytic, relapsed) - rituximab (TA193)",
+2010-07,http://guidance.nice.org.uk/TA192,TA192,191,"Lung cancer (non-small-cell, first line) - gefitinib (TA192)",
+2010-08,http://guidance.nice.org.uk/TA197,TA197,192,Atrial fibrillation - dronedarone (TA197),2013-03
+2010-08,http://guidance.nice.org.uk/TA196,TA196,193,Gastrointestinal stromal tumours - imatinib (adjuvant) (TA196),2011-06
+2010-08,http://guidance.nice.org.uk/TA198,TA198,194,Rheumatoid arthritis - tocilizumab (TA198) (replaced by TA247),2013-08
+2010-08,http://guidance.nice.org.uk/TA199,TA199,195,"Psoriatic arthritis - etanercept, infliximab and adalimumab (TA199)",2013-06
+2010-08,http://guidance.nice.org.uk/TA195,TA195,196,Rheumatoid arthritis - drugs for treatment after failure of a TNF inhibitor (TA195),2013-06
+2010-09,http://guidance.nice.org.uk/TA200,TA200,197,Hepatitis C - peginterferon alfa and ribavirin (TA200),2013-07
+2010-10,http://guidance.nice.org.uk/TA205,TA205,198,Thrombocytopenic purpura - eltrombopag (TA205),2013-06
+2010-10,http://guidance.nice.org.uk/TA201,TA201,199,Asthma (in children) - omalizumab (TA201),2010-10
+2010-10,http://guidance.nice.org.uk/TA202,TA202,200,"Chronic lymphocytic leukaemia - ofatumumab
+
+ (TA202)",2013-09
+2010-10,http://guidance.nice.org.uk/TA206,TA206,201,Lymphoma (non-Hodgkin's) - bendamustine (terminated appraisal) (TA206),
+2010-10,http://guidance.nice.org.uk/TA207,TA207,202,Mantle cell lymphoma (relapsed) - temsirolimus (terminated appraisal) (TA207),
+2010-10,http://guidance.nice.org.uk/TA203,TA203,203,Diabetes (type 2) - liraglutide (TA203),2012-05
+2010-10,http://guidance.nice.org.uk/TA204,TA204,204,Osteoporotic fractures - denosumab (TA204),
+2010-11,http://guidance.nice.org.uk/TA209,TA209,205,Gastrointestinal stromal tumours (unresectable/metastatic) - imatinib (TA209),2013-08
+2010-11,http://guidance.nice.org.uk/TA208,TA208,206,"Gastric cancer (HER2-positive metastatic) - trastuzumab
+ (TA208)",2013-08
+2010-12,http://guidance.nice.org.uk/TA212,TA212,207,"Colorectal cancer (metastatic) - bevacizumab
+ (TA212)",2013-05
+2010-12,http://guidance.nice.org.uk/TA210,TA210,208,Vascular disease - clopidogrel and dipyridamole (TA210),2013-07
+2010-12,http://guidance.nice.org.uk/TA211,TA211,209,Constipation (women) - prucalopride (TA211),2013-10
+2011-01,http://guidance.nice.org.uk/TA160,TA160,210,Osteoporosis - primary prevention (TA160),2010-07
+2011-01,http://guidance.nice.org.uk/TA161,TA161,211,Osteoporosis - secondary prevention including strontium ranelate (TA161),
+2011-01,http://guidance.nice.org.uk/TA213,TA213,212,Schizophrenia - aripiprazole (TA213),2013-11
+2011-02,http://guidance.nice.org.uk/TA214,TA214,213,Breast cancer - bevacizumab (in combination with a taxane) (TA214),2013-07
+2011-02,http://guidance.nice.org.uk/TA216,TA216,214,Leukaemia (lymphocytic) - bendamustine (TA216),2013-12
+2011-02,http://guidance.nice.org.uk/TA215,TA215,215,Renal cell carcinoma (first line metastatic) - pazopanib (TA215),2013-12
+2011-03,http://guidance.nice.org.uk/TA218,TA218,216,Myelodysplastic syndromes - azacitidine (TA218),2014-02
+2011-03,http://guidance.nice.org.uk/TA217,TA217,217,"Alzheimer's disease - donepezil, galantamine, rivastigmine and memantine
+ (TA217)",2014-04
+2011-04,http://guidance.nice.org.uk/TA219,TA219,218,Everolimus for the second-line treatment of advanced renal cell carcinoma (TA219),2013-02
+2011-04,http://guidance.nice.org.uk/TA222,TA222,219,Ovarian cancer (relapsed) - trabectedin (TA222),
+2011-04,http://guidance.nice.org.uk/TA220,TA220,220,"Psoriatic arthritis - golimumab
+ (TA220)",2013-06
+2011-04,http://guidance.nice.org.uk/TA221,TA221,221,Thrombocytopenic purpura - romiplostim (TA221),2014-03
+2011-05,http://guidance.nice.org.uk/TA223,TA223,222,"Peripheral arterial disease - cilostazol, naftidrofyryl oxalate, pentoxifylline and inositol nicotinate (TA223)",2014-05
+2011-06,http://guidance.nice.org.uk/TA224,TA224,223,Rheumatoid arthritis (methotrexate-naïve) - golimumab (terminated appraisal) (TA224),
+2011-06,http://guidance.nice.org.uk/TA225,TA225,224,Rheumatoid arthritis (after the failure of previous anti-rheumatic drugs) - golimumab (TA225),2013-06
+2011-06,http://guidance.nice.org.uk/TA226,TA226,225,Lymphoma (follicular non-Hodgkin's) - rituximab (TA226),2014-05
+2011-06,http://guidance.nice.org.uk/TA227,TA227,226,"Lung cancer (non-small-cell, advanced or metastatic maintenance treatment) - erlotinib (monotherapy) (TA227)",2013-04
+2011-07,http://guidance.nice.org.uk/TA231,TA231,227,Depression - agomelatine (terminated appraisal) (TA231),
+2011-07,http://guidance.nice.org.uk/TA232,TA232,228,"Epilepsy (partial) - retigabine (adjuvant)
+ (TA232)",2014-06
+2011-07,http://guidance.nice.org.uk/TA228,TA228,229,"Multiple myeloma (first line) - bortezomib and thalidomide
+ (TA228)",2014-07
+2011-07,http://guidance.nice.org.uk/TA230,TA230,230,"Myocardial infarction (persistent ST-segment elevation) - bivalirudin
+ (TA230)",2014-07
+2011-07,http://guidance.nice.org.uk/TA229,TA229,231,Macular oedema (retinal vein occlusion) - dexamethasone (TA229),2014-01
+2011-08,http://guidance.nice.org.uk/TA234,TA234,232,Rheumatoid arthritis - abatacept (2nd line) (TA234),2014-07
+2011-08,http://guidance.nice.org.uk/TA233,TA233,233,Ankylosing spondylitis - golimumab (TA233),2014-08
+2011-10,http://guidance.nice.org.uk/TA236,TA236,234,Acute coronary syndromes - ticagrelor (TA236),2013-03
+2011-10,http://guidance.nice.org.uk/TA235,TA235,235,Osteosarcoma - mifamurtide (TA235),2013-11
+2011-11,http://guidance.nice.org.uk/TA237,TA237,236,Macular oedema (diabetic) - ranibizumab (TA237),2013-03
+2011-12,http://guidance.nice.org.uk/TA239,TA239,237,"Breast cancer (metastatic) - fulvestrant
+ (TA239)",2014-08
+2011-12,http://guidance.nice.org.uk/TA240,TA240,238,Colorectal cancer (metastatic) - panitumumab (terminated appraisal) (TA240),
+2011-12,http://guidance.nice.org.uk/TA238,TA238,239,"Arthritis (juvenile idiopathic, systemic) - tocilizumab (TA238)",
+2012-01,http://guidance.nice.org.uk/TA241,TA241,240,"Leukaemia (chronic myeloid) - dasatinib, nilotinib, imatinib (intolerant, resistant) (TA241)",2014-09
+2012-01,http://guidance.nice.org.uk/TA243,TA243,241,"Follicular lymphoma - rituximab (review)
+ (TA243)",2014-05
+2012-01,http://guidance.nice.org.uk/TA244,TA244,242,"Chronic obstructive pulmonary disease - roflumilast
+ (TA244)",
+2012-01,http://guidance.nice.org.uk/TA242,TA242,243,"Colorectal cancer (metastatic) 2nd line - cetuximab, bevacizumab and panitumumab (review)
+ (TA242)",2015-01
+2012-01,http://guidance.nice.org.uk/TA245,TA245,244,"Venous thromboembolism - apixaban (hip and knee surgery)
+ (TA245)",2015-01
+2012-02,http://guidance.nice.org.uk/TA246,TA246,245,Venom anaphylaxis - immunotherapy pharmalgen (TA246),2017-01
+2012-02,http://guidance.nice.org.uk/TA248,TA248,246,Diabetes (type 2) - exenatide (prolonged release) (TA248),2012-05
+2012-02,http://guidance.nice.org.uk/TA247,TA247,247,Rheumatoid arthritis - tocilizumab (rapid review TA198) (TA247),2013-06
+2012-03,http://guidance.nice.org.uk/TA249,TA249,248,Atrial fibrillation - dabigatran etexilate (TA249),2014-10
+2012-04,http://guidance.nice.org.uk/TA250,TA250,249,Breast cancer (advanced) - eribulin (TA250),2014-11
+2012-04,http://guidance.nice.org.uk/TA251,TA251,250,"Leukaemia (chronic myeloid, first line) - dasatinib, nilotinib and standard-dose imatinib (TA251)",2014-05
+2012-04,http://guidance.nice.org.uk/TA254,TA254,251,Multiple sclerosis (relapsing-remitting) - fingolimod (TA254),
+2012-04,http://guidance.nice.org.uk/TA253,TA253,252,Hepatitis C (genotype 1) - boceprevir (TA253),2015-04
+2012-04,http://guidance.nice.org.uk/TA252,TA252,253,Hepatitis C (genotype 1) - telaprevir (TA252),2015-04
+2012-05,http://guidance.nice.org.uk/TA255,TA255,254,Prostate cancer - cabazitaxel (TA255),2015-02
+2012-05,http://guidance.nice.org.uk/TA256,TA256,255,Atrial fibrillation (stroke prevention) - rivaroxaban (TA256),2014-10
+2012-06,http://guidance.nice.org.uk/TA258,TA258,256,"Lung cancer (non small cell, EGFR-TK mutation positive) - erlotinib (1st line) (TA258)",
+2012-06,http://guidance.nice.org.uk/TA257,TA257,257,Breast cancer (metastatic hormone-receptor) - lapatinib and trastuzumab (with aromatase inhibitor) (TA257),2015-06
+2012-06,http://guidance.nice.org.uk/TA260,TA260,258,Migraine (chronic) - botulinum toxin type A (TA260),2015-06
+2012-06,http://guidance.nice.org.uk/TA259,TA259,259,"Prostate cancer (metastatic, castration resistant) - abiraterone (following cytoxic therapy) (TA259)",2015-04
+2012-07,http://guidance.nice.org.uk/TA262,TA262,260,"Ulcerative colitis (moderate to severe, second line) - adalimumab (terminated appraisal) (TA262)",
+2012-07,http://guidance.nice.org.uk/TA261,TA261,261,Venous thromboembolism (treatment and long term secondary prevention) - rivaroxaban  (TA261),2015-05
+2012-08,http://guidance.nice.org.uk/TA263,TA263,262,Bevacizumab in combination with capecitabine for the first-line treatment of metastatic breast cancer (TA263),2015-06
+2012-09,http://guidance.nice.org.uk/TA264,TA264,263,"Stroke (acute, ischaemic) - alteplase (TA264)",2015-09
+2012-10,http://guidance.nice.org.uk/TA265,TA265,264,"Bone metastases from solid tumours - denosumab
+ (TA265)",2013-07

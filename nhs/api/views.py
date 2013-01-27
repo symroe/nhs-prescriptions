@@ -1,4 +1,9 @@
 """
+NOTE: This has been replaced with tastypie.
+
+Should be removed at some point, but leaving it here for the time being.
+
+
 Serve views for our API callsn
 
 Notes:
@@ -23,7 +28,10 @@ import json
 from django.db.models import Sum
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.generic import View
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
+from nhs.patents.models import Patent
 from nhs.ccgs.models import CCG
 from nhs.practices.models import Practice
 from nhs.prescriptions.models import Group, Product
@@ -114,13 +122,32 @@ class GroupHabits(ApiView):
             return habit
 
         for drug in group[0].drugs.all():
-            drughabit = list(sorted(drug.prescription_set.
-                                         values('period').
-                                         annotate(total=Sum('quantity')),
-                                    key=lambda x: x['period']))
+            if 'practice' in request.GET:
+                drughabit = list(sorted(drug.prescription_set.
+                                        filter(practice__practice = request.GET['practice']).
+                                        values('period').
+                                        annotate(total=Sum('quantity')),
+                                        key=lambda x: x['period']))
+
+
+            else:
+                drughabit = list(sorted(drug.prescription_set.
+                                             values('period').
+                                             annotate(total=Sum('quantity')),
+                                        key=lambda x: x['period']))
+            try:
+                patent = Patent.objects.get(drug=drug)
+                patent = patent.expiry_date.strftime('%Y%m')
+            except Patent.DoesNotExist:
+                patent = None
 
             habit.append(dict(code=drug.bnf_code, name=drug.name,
+                              patent = patent,
                               habit=drughabit))
+
+
+
+
 
         return habit
 
@@ -161,6 +188,11 @@ class PracticeHabits(ApiView):
         #         )
         return habits
 
+def lottery(request):
+    g = Group.objects.get(name='lottery')
+    drug = g.drugs.all()[0]
+    practices = set([p.practice for p in drug.prescription_set.all()])
+    return render_to_response('examples/lottery.html', dict(practices=practices), RequestContext(request))
 
 # !!! Extend this to take a location prameter thing
 class CCGs(ApiView):

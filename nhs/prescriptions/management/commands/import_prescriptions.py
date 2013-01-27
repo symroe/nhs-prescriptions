@@ -106,7 +106,7 @@ class Command(BaseCommand):
                         line[4]
                         ])
 
-    def handle(self, **options):
+    def handle(self, *args, **options):
         assert options['filename']
         assert options['date']
         self.filename = options['filename']
