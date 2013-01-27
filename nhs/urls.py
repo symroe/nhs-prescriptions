@@ -11,9 +11,12 @@ from django.views.generic import TemplateView
 urlpatterns = patterns(
     '',
     url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
-    url('^explore/?$', TemplateView.as_view(template_name='explore.html'), name='explore'),
-    url('^research/?$', TemplateView.as_view(template_name='research.html'), name='research'),
+
+    url(r'^explore', include('nhs.explore.urls')),
+
+    url('^research/inhaler/?$', TemplateView.as_view(template_name='inhaler.html'), name='inhaler'),
     # API
+
     url(r'^api/', include('nhs.api.urls')),
     # Examples
     url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),

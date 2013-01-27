@@ -97,7 +97,7 @@ INSTALLED_APPS = (
     'south',
     'django_extensions',
     'mapit',
-
+    'test_utils',
     'prescriptions',
     'practices',
     'patents',
@@ -116,4 +116,3 @@ try:
     from local_settings import *
 except:
     pass
-

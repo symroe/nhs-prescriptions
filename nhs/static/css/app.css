@@ -1,4 +1,4 @@
-body.custom-background { background-image: url('https://s3-eu-west-1.amazonaws.com/prescribinganalytics/img/bg.jpg'); background-repeat: no-repeat;
+body.custom-background { background-image: url('/static/img/hexabump.png'); background-repeat: repeat;
 background-position: top left; background-attachment: fixed; }
 
 #mainNav ul a, #mainNav ul li.sfHover ul a { color: #8f8f8f !important;	}
