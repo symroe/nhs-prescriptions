@@ -19,9 +19,11 @@ v1_api.register(CCGResource())
 
 
 urlpatterns = patterns(
-    include(v1_api.urls), #both needed, not sure why.  Leaving for now. :/
+    '',
+    url(r'doc/', include('tastypie_swagger.urls', namespace='tastypie_swagger')),
+    # include(v1_api.urls), #both needed, not sure why.  Leaving for now. :/
     url('', include(v1_api.urls)),
-    
+
     # Old, replaced with tastypie
     # '',
     # url(r'drug/$',                  Drug.as_view(),           name='drugapi'),
