@@ -1,0 +1,11 @@
+After a reorganisation of the static dir:
+
+../
+├── css
+│   └── lib
+├── img
+└── js (base prescribing library)
+    ├── clients (Example visualisations etc based on the API)
+    ├── data (static JSON data files)
+    ├── lib (3rd party libraries)
+
