@@ -33,17 +33,36 @@
         template: '#explore-controls-template',
 
         regions: {
-            bucket: '#bucket1',
+            bucket1: '#bucket1',
             bucket2: '#bucket2'
+        },
+
+        events: {
+            'click button': 'resultise'
+        },
+
+        resultise: function(){
+            var bucket1 = jQuery('#bucket1 select').attr('value')
+            var bucket1 = jQuery('#bucket1 select').attr('value')
+            log.debug('make api heatmap call')
+            // What we want here is for prescribing.js to
+            // return us a view with a heatmap in it.
         }
+
     })
 
     var DrugOptionView = Backbone.Marionette.ItemView.extend({
-        template: '#drug-option-template'
+        template: '#drug-option-template',
+        tagName: 'option',
+        onRender: function(){
+            this.$el.attr('value', this.model.get('bnf_code'));
+            return
+        }
     });
 
     var DrugSelectView = Backbone.Marionette.CollectionView.extend({
-        itemView: DrugOptionView
+        itemView: DrugOptionView,
+        tagName: 'select'
     });
 
     var ExApp = context[namespace] = new Backbone.Marionette.Application();
@@ -67,11 +86,15 @@
 
         bucket1 = new DrugSelectView({
             collection: all_drugs
+        });
+
+        bucket2 = new DrugSelectView({
+            collection: all_drugs
         })
 
-        controls.bucket.show(bucket1);
-
         layout.controls.show(controls);
+        controls.bucket1.show(bucket1);
+        controls.bucket2.show(bucket2);
     });
 
 })(this.window||exports, "Explore")
