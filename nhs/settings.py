@@ -91,7 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.gis',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    # 'south',
+    'south',
     'django_extensions',
     'mapit',
     'prescriptions',
