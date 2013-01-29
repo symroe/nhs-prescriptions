@@ -23,15 +23,4 @@ urlpatterns = patterns(
     url(r'doc/', include('tastypie_swagger.urls', namespace='tastypie_swagger')),
     # include(v1_api.urls), #both needed, not sure why.  Leaving for now. :/
     url('', include(v1_api.urls)),
-
-    # Old, replaced with tastypie
-    # '',
-    # url(r'drug/$',                  Drug.as_view(),           name='drugapi'),
-    # url(r'drug/habits/$',           DrugHabits.as_view(),     name = "drughabitsapi"),
-    # url(r'drug/habits/location/$',  LocalDrug.as_view(),      name='localdrugapi'),
-    # url(r'group/habits/$',          GroupHabits.as_view(),     name = "grouphabitsapi"),
-    # url(r'practice/habits/$',       PracticeHabits.as_view(), name='practicehabitsapi'),
-    # url(r'practice/$',              Practices.as_view(),       name='practiceapi'),
-    # url(r'ccg/$',                  CCGs.as_view(),           name='ccgapi'),
-    # url(r'ccg/habits/$',           CCGHabits.as_view(),     name = "ccghabitsapi"),
     )
