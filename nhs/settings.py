@@ -96,6 +96,7 @@ INSTALLED_APPS = (
     'ccgs',
 )
 
+# 27700
 MAPIT_AREA_SRID = 4326
 MAPIT_COUNTRY = 'GB'
 
