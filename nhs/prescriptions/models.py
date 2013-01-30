@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+Individual prescriptions of Drugs, as well as standard buckets.
+"""
 from django.db import models
 
 from practices.models import Practice
@@ -13,12 +16,12 @@ class Product(models.Model):
     name     = models.CharField(blank=True, max_length=255, db_index=True)
     def __repr__(self):
         return "<Product {0}>".format(self.name)
-    
+
     def __unicode__(self):
         return self.pk
 
 class Prescription(models.Model):
-    
+
     """
     A month, practice granularity record of prescriptions of specific
     products.
@@ -31,7 +34,7 @@ class Prescription(models.Model):
     period      = models.IntegerField(blank=True, null=True, db_index=True)
 
     objects = PrescriptionManager()
-    
+
     def __repr__(self):
         return "<Presciption {0} X {1}>".format(self.product.name, self.quantity)
 
