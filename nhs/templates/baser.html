@@ -1,59 +1,14 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-GB">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Open Prescribing</title>
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" />
-        <link rel="stylesheet" href="{{STATIC_URL}}/css/inktheme.css" type="text/css" media="screen" />
-        <link rel="shortcut icon" href="{{STATIC_URL}}/img/favicon.png" />
-        <link rel="stylesheet" id="superfish-css" href="{{STATIC_URL}}/css/superfish.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="{{STATIC_URL}}/css/leaflet.css" type="text/css" media="all" />
-        <!--[if lte IE 8]><link rel="stylesheet" href="<%= settings.media_url %>/css/leaflet.ie.css" /><![endif]-->
-        <link rel="stylesheet" id="app-css" href="{{STATIC_URL}}/css/app.css" type="text/css" media="all" />
-        <script src="{{STATIC_URL}}js/lib/jquery.js"></script>
-        <script src="{{STATIC_URL}}js/lib/underscore.js"></script>
-        <script src="{{STATIC_URL}}js/lib/backbone.js"></script>
-        <script src="{{STATIC_URL}}js/lib/backbone.marionette.js"></script>
-        <script src="{{STATIC_URL}}js/scrip.js"></script>
-        <link rel="next" title="About this site" href="/about" />
-        <link rel="canonical" href="http://prescriptions.openhealthcare.org.uk/" />
-        <!--[if IE 7]><link rel="stylesheet" href="<%= settings.media_url %>/css/ie7.css" type="text/css" media="screen" /><![endif]-->
-        <!--[if IE 8]><link rel="stylesheet" href="<%= settings.media_url %>/css/ie8.css" type="text/css" media="screen" /><![endif]-->
-        {% block extratemplates %}{% endblock %}
+      {% include 'head.html' %}
+      {% block extratemplates %}{% endblock %}
     </head>
     <body class="home page page-id-82 page-template-default custom-background">
         <div id="container">
             <div id="header">
                 <div class="inside clearfix">
-
-                    <div id="logo">
-                        <h1 class="logo"><a href="/"><img src="{{STATIC_URL}}/img/drugs.jpg" alt="Open Prescribing" width="100px"/></a></h1>
-                    </div>
-
-                    <div id="mainNav" class="clearfix">
-                        <div class="menu-menumain-container">
-                            <ul id="menu-menumain" class="sf-menu">
-                                <li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page page-item-82 menu-item-113 <% if request.path == '/' %>current-menu-item page_item current_page_item<% end %>"><a href="/">Home</a></li>
-                                <li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109 "><a href="/about">About</a></li>
-                                <li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111 "><a href="/explore/ratio">Explore</a></li>
-                                <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113 "><a href="/apidocs">Api</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="sidebar" class="clearfix">
-                        <div id="text-2" class="widget_text sidebarBox widgetBox">
-                            <h3>Open Prescribing</h3>
-                            <div class="textwidget">
-                                <p>
-                                  Open Prescribing is an NHSHackday project to answer questions
-                                  about the GP prescriptions dataset
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+                  {% include 'nav.html' %}
                 </div>
             </div>
         </div>
@@ -61,23 +16,13 @@
         <div id="main" class="clearfix">
             <div id="content">
                 <div class="post-82 page type-page status-publish hentry clearfix box">
-                  {% block content %}
-
-                  {% endblock %}
+                  {% block content %}{% endblock %}
                 </div>
             </div>
             <div id="footer"></div>
         </div>
 
-            <!-- <script type='text/javascript' src='{{STATIC_URL}}/js/superfish.js'></script> -->
-            <!-- <script type='text/javascript' src='{{STATIC_URL}}/js/jquery.fitvids.js'></script> -->
-            <!-- <script type='text/javascript' src='{{STATIC_URL}}/js/jquery.isotope.min.js'></script> -->
-            <!-- <script type='text/javascript' src='{{STATIC_URL}}/js/tinynav.min.js'></script> -->
-            <!-- <script type='text/javascript' src='{{STATIC_URL}}/js/theme_trust.js'></script> -->
-
-            {% block extrascripts %}
-
-            {% endblock %}
+        {% block extrascripts %}{% endblock %}
 
     </body>
 </html>

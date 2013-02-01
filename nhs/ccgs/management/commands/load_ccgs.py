@@ -46,7 +46,6 @@ class Command(BaseCommand):
         # Naughty csv has some fields larger than 128Kb so we'll just make the
         # limit larger
         csv.field_size_limit(1310720)
-                
         reader = csv.reader(ReadlineIterator(sys.stdin))
         reader.next()  # skip header
         for row in reader:
@@ -72,5 +71,5 @@ class Command(BaseCommand):
                 results.append(P)
             except:
                 pass
-        
+
         return MultiPolygon(results)

@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.conf.urls.defaults import patterns, url, include
 from django.views.generic import TemplateView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -24,7 +25,7 @@ urlpatterns = patterns(
 
     url(r'^api/', include('nhs.api.urls')),
 
-    
+
     # Examples
     url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
 
@@ -36,7 +37,9 @@ urlpatterns = patterns(
 
 )
 
-urlpatterns += patterns(
-    '',
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
+urlpatterns += staticfiles_urlpatterns()
+
+# urlpatterns += patterns(
+#     '',
+#     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+# )
