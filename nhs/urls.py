@@ -27,7 +27,8 @@ urlpatterns = patterns(
 
 
     # Examples
-    url(r'^examples/group/statins/$', TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
+    url(r'^examples/group/statins/$',
+        TemplateView.as_view(template_name='examples/statins.html'), name='statgraph'),
 
 #    url(r'^mapit/', include('mapit.urls')),
 
@@ -38,8 +39,3 @@ urlpatterns = patterns(
 )
 
 urlpatterns += staticfiles_urlpatterns()
-
-# urlpatterns += patterns(
-#     '',
-#     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-# )

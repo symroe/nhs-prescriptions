@@ -66,6 +66,10 @@
     });
 
     var ExApp = context[namespace] = new Backbone.Marionette.Application();
+    var OP = new Scrip({
+            api_host: window.location.host
+        })
+
 
     ExApp.addRegions({
         container: '#explore-container'
@@ -75,10 +79,6 @@
         var layout = new ExLayout();
         ExApp.container.show(layout);
         controls = new ExControlLayout()
-
-        OP = new Scrip({
-            api_host: window.location.host
-        })
 
         all_drugs = OP.get({
             resource: 'product'

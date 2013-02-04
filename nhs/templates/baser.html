@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-GB">
     <head>
+      <title>Open Prescribing{% block extratitle %}{% endblock %}</title>
+      {% block extrastyles %}{% endblock %}
       {% include 'head.html' %}
       {% block extratemplates %}{% endblock %}
     </head>
@@ -19,7 +21,10 @@
                   {% block content %}{% endblock %}
                 </div>
             </div>
-            <div id="footer"></div>
+            <div id="footer">
+              {% block footer %}
+
+            {% endblock %}</div>
         </div>
 
         {% block extrascripts %}{% endblock %}

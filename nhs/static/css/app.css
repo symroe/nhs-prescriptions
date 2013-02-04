@@ -116,3 +116,6 @@ a:hover {color: #f1532f;}
     margin-right: 20px;
     margin-bottom: 20px;
 }
+body #header {
+    background-color: white;
+}
