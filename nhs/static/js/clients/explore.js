@@ -43,7 +43,7 @@
 
         resultise: function(){
             var bucket1 = jQuery('#bucket1 select').attr('value')
-            var bucket1 = jQuery('#bucket1 select').attr('value')
+            var bucket2 = jQuery('#bucket2 select').attr('value')
             log.debug('make api heatmap call')
             // What we want here is for prescribing.js to
             // return us a view with a heatmap in it.

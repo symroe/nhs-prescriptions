@@ -29,6 +29,23 @@ class PrescriptionComparisonResource(ModelResource):
             filtering = {
                 "bnf_code": ALL,
             }
+            custom_filtering = {
+                'query_type': {
+                    'dataType': 'string',
+                    'required': True,
+                    'description': 'Granularity of the data you want to retrieve'
+                    },
+                'group1': {
+                    'dataType': 'string',
+                    'required': True,
+                    'description': 'Frist bucket. Comma separated list of BNF Codes'
+                    },
+                'group2': {
+                    'dataType': 'string',
+                    'required': True,
+                    'description': 'Second bucket. Comma separated list of BNF Codes'
+                    }
+                }
             allowed_methods = ['get']
 
     def apply_filters(self, request):
