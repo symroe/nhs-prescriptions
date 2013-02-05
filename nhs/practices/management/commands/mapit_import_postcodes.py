@@ -120,7 +120,11 @@ class Command(LabelCommand):
     def do_postcode(self, location=None, srid=None):
         try:
             pc = Postcode.objects.get(postcode=self.code)
+            import ipdb
+            ipdb.set_trace()
             if location:
+                mp =  location.clone()
+                mp.transform(27700)
                 curr_location = ( pc.location[0], pc.location[1] )
                 if settings.MAPIT_COUNTRY == 'GB':
                     if pc.postcode[0:2] == 'BT':

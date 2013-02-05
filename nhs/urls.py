@@ -17,6 +17,7 @@ def getrecs():
 urlpatterns = patterns(
     '',
     url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
+    url(r'^about/?$', TemplateView.as_view(template_name='about.html'), name='about'),
 
     url(r'^explore', include('nhs.explore.urls')),
 

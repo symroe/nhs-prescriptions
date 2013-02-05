@@ -1,0 +1,23 @@
+{% extends 'baser.html' %}
+{% block extratitle %} - Data{% endblock %}
+{% block content %}
+  <h1>Open Prescriptions Data</h1>
+  <div id="content">
+    <h2>Where does the data come from?</h2>
+    <h3>Prescribing Data</h3>
+    <p>
+      The prescribing data comes from the NHS Information Centre
+      <a href="http://www.ic.nhs.uk/gpprescribingdata">GP prescribing activity</a>.
+    </p>
+    <h3>Geolocation Data</h3>
+    <p>
+      The geolocation data comes from the Ordnance Survey
+      <a href="http://www.ordnancesurvey.co.uk/oswebsite/products/code-point-open/">Code-Point Open</a>
+      data, using the mySociety <a href="http://mapit.mysociety.org/">Mapit</a> project.
+    </p>
+    <p>
+      The CCG boundaries come from the list of proposed CCGs available
+      <a href="https://www.google.com/fusiontables/DataSource?snapid=S571166HfO4">here</a>
+    </p>
+  </div>
+{% endblock %}

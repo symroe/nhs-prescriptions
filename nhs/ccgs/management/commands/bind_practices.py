@@ -15,8 +15,10 @@ class Command(BaseCommand):
             if not practice.pc:
                 print "No Mapit PC for", practice
                 continue
-
-            ccgs = CCG.objects.filter(poly__contains=practice.location)
+            ccgs = CCG.objects.filter(poly__contains=practice.pc.location)
             if ccgs:
+                print 'Found CCG!'
                 practice.ccg = ccgs[0]
                 practice.save()
+            else:
+                print 'No CCG containing', practice.pc.location.x, practice.pc.location.y

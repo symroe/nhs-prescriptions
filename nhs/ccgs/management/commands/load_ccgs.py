@@ -72,4 +72,6 @@ class Command(BaseCommand):
             except:
                 pass
 
-        return MultiPolygon(results)
+        mp =   MultiPolygon(results)
+        mp.transform(4326)
+        return mp
