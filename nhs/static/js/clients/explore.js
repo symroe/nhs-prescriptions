@@ -47,6 +47,27 @@
             log.debug('make api heatmap call')
             // What we want here is for prescribing.js to
             // return us a view with a heatmap in it.
+            var mapview = OP.maps.bucket({
+                bucket1: [bucket1],
+                bucket2: [bucket2]
+            });
+            log.debug(mapview);
+            ExApp.trigger('results:new_view', mapview);
+        }
+
+    })
+
+    var ExResultLayout = Backbone.Marionette.Layout.extend({
+        template: '#explore-results-template',
+
+        regions: {
+            results: '#explore-results'
+        },
+
+        new_result: function(view){
+
+            log.debug(view);
+            this.results.show(view);
         }
 
     })
@@ -70,7 +91,6 @@
             api_host: window.location.host
         })
 
-
     ExApp.addRegions({
         container: '#explore-container'
     });
@@ -78,7 +98,9 @@
     ExApp.addInitializer(function(options){
         var layout = new ExLayout();
         ExApp.container.show(layout);
-        controls = new ExControlLayout()
+        controls = new ExControlLayout();
+        results = new ExResultLayout();
+        ExApp.on('results:new_view', results.new_result, results);
 
         all_drugs = OP.get({
             resource: 'product'
@@ -95,6 +117,7 @@
         layout.controls.show(controls);
         controls.bucket1.show(bucket1);
         controls.bucket2.show(bucket2);
+        layout.results.show(results);
     });
 
 })(this.window||exports, "Explore")

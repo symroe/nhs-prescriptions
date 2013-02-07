@@ -87,8 +87,9 @@
     });
 
     // Define our models
-    Practice = Backbone.Model.extend({})
-    Drug = Backbone.Model.extend({})
+    Practice = Backbone.Model.extend({});
+    Drug     = Backbone.Model.extend({});
+    Bucket   = Backbone.Model.extend({});
 
     // Define Collections
     Pharmacy = ScripCollection.extend({
@@ -96,16 +97,79 @@
         resource: 'product'
     });
 
+    Brigade = ScripCollection.extend({
+        model: Bucket,
+        resource: 'prescriptioncomparison',
+    });
+
+    // Views
+    OPMap = Backbone.Marionette.ItemView.extend({
+        template: function(serialised_model){
+            var markup = "<center><div id=\"map\"><img src=\"https://s3-eu-west-1.amazonaws.com/prescribinganalytics/img/spinner.gif\" style='margin-top:20px;'></div></center>"
+            return markup
+        }
+    });
+
+    BucketMap = OPMap.extend({
+
+        onRender: function(){
+            log.debug('maprendered');
+
+            // var map = L.map('map').setView([53.0, -1.5], 6);
+            // var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
+            //     attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+            //     key: 'BC9A493B41014CAABB98F0471D759707',
+            //     styleId: 22677
+            // }).addTo(map);
+
+            return
+        }
+    });
+
     // GET Api calls
+
+    var Api = {
+
+        'product': function(opts){
+            pharmacy = new Pharmacy();
+            pharmacy.fetch();
+            return pharmacy
+        },
+
+        'prescriptioncomparison': function(opts){
+            brigade = new Brigade();
+            brigade.fetch({data: {
+                'query_type': opts['query_type'] || 'ccg',
+                'group1': opts['group1'].join(','),
+                'group2': opts['group2'].join(','),
+            }})
+            return brigade
+        }
+    }
+
+    // Api wrapper for producing Map views
+    var Maps = {
+
+        bucket: function(opts){
+            var comparison = Api.prescriptioncomparison({
+                group1:  opts.bucket1 || [],
+                group2:  opts.bucket2 || []
+            });
+            var bucketmap = new BucketMap({
+                collection: comparison
+            });
+            return bucketmap;
+        }
+    };
+
     var GET = function(opts){
         log.debug('Getting!');
         log.debug(opts);
-        pharmacy = new Pharmacy();
-        pharmacy.fetch();
-        return pharmacy
+        return Api[opts.resource](opts);
     }
 
     App.get = GET;
+    App.maps = Maps;
 
     // Deal with configuration options passed in to the start method.
     App.addInitializer(function(opts){
@@ -125,13 +189,8 @@
 
 
 
-          // var map = L.map('map').setView([53.0, -1.5], 6);
 
-	  //       var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-	  //       	attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-	  //       	key: 'BC9A493B41014CAABB98F0471D759707',
-	  //       	styleId: 22677
-	  //       }).addTo(map);
+
 
 
 	  //       // control that shows state info on hover

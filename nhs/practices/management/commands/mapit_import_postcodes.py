@@ -94,6 +94,8 @@ class Command(LabelCommand):
             if not self.pre_row(row, options):
                 continue
             pc = self.handle_row(row, options)
+            if not pc:
+                continue
             self.post_row(pc)
         self.print_stats()
 
@@ -109,8 +111,11 @@ class Command(LabelCommand):
 
         if not options['coord-field-lon']:
             options['coord-field-lon'] = int(options['coord-field-lat']) + 1
-        lat = float(row[int(options['coord-field-lat'])-1])
-        lon = float(row[int(options['coord-field-lon'])-1])
+        lat = row[int(options['coord-field-lat'])-1]
+        lon = row[int(options['coord-field-lon'])-1]
+        if lat == '' or lon == '':
+            return False
+        lat, lon = float(lat), float(lon)
         srid = int(options['srid'])
         location = Point(lon, lat, srid=srid)
         return self.do_postcode(location, srid)
@@ -120,17 +125,13 @@ class Command(LabelCommand):
     def do_postcode(self, location=None, srid=None):
         try:
             pc = Postcode.objects.get(postcode=self.code)
-            import ipdb
-            ipdb.set_trace()
             if location:
-                mp =  location.clone()
-                mp.transform(27700)
                 curr_location = ( pc.location[0], pc.location[1] )
                 if settings.MAPIT_COUNTRY == 'GB':
                     if pc.postcode[0:2] == 'BT':
                         curr_location = pc.as_irish_grid()
                     else:
-                        pc.location.transform(27700) # Postcode locations are stored as WGS84
+                        # pc.location.transform(27700) # Postcode locations are stored as WGS84
                         curr_location = ( pc.location[0], pc.location[1] )
                     curr_location = map(round, curr_location)
                 elif srid != 4326:

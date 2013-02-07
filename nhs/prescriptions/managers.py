@@ -36,12 +36,14 @@ class PrescriptionManager(models.Manager):
 
         cursor = connection.cursor()
         cursor.execute("""
-            SELECT ccg_id as id, COUNT(*)
+            SELECT C.code as id, COUNT(*)
             FROM prescriptions_prescription as P
             JOIN practices_practice as PR
             ON P.practice_id = PR.practice
+            JOIN ccgs_ccg as C
+            ON PR.ccg_id= C.id
             WHERE P.product_id IN %s
-            GROUP BY PR.ccg_id
+            GROUP BY C.code
             """ % codes)
 
         return self.dict_cursor(cursor)

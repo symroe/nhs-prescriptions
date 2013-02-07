@@ -29,6 +29,9 @@ class PrescriptionComparisonResource(ModelResource):
             filtering = {
                 "bnf_code": ALL,
             }
+            # This attribute is from my fork of Tastypie Swagger that is
+            # yet to be merged upstream - it allows you to specify API
+            # documentation details declaratively on the Resource
             custom_filtering = {
                 'query_type': {
                     'dataType': 'string',
