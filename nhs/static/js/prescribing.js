@@ -52,6 +52,9 @@
     // Namespace mapping functions
     var mapping = {
 
+        info: null,
+        geojson: null,
+
         // Make a blank CCG feature
         CCGFeature: function(){
             feat = {
@@ -121,13 +124,14 @@
             if (!L.Browser.ie && !L.Browser.opera) {
                 layer.bringToFront();
             }
-            info.update(layer.feature.properties);
+            mapping.info.update(layer.feature.properties);
         },
 
         // return our feature to normal
         resetHighlight: function(e) {
-            geojson.resetStyle(e.target);
-            info.update();
+            // TODO - FIX THIS
+            mapping.geojson.resetStyle(e.target);
+            mapping.info.update();
         },
 
         // When we've selected a feature, zoom to it.
@@ -146,6 +150,7 @@
         // control that shows state info on hover
         make_hoverinfo: function(map){
             var info = L.control();
+            mapping.info = info;
 
             // Create a DOM element
             info.onAdd = function (map) {
@@ -326,6 +331,7 @@
                 }
             );
             geoJSON.addTo(this.map);
+            mapping.geojson = geoJSON;
         }
 
 
