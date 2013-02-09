@@ -1,3 +1,6 @@
+.left { float: left; }
+.span350 { width: 350px; }
+
 body.custom-background { background-image: url('/static/img/hexabump.png'); background-repeat: repeat;
 background-position: top left; background-attachment: fixed; }
 
@@ -60,8 +63,8 @@ a:hover {color: #f1532f;}
 }
 
 #map {
-			width: 640px;
-			height: 480px;
+			width: 1200px;
+			height: 700px;
 		}
 
 .info {
@@ -83,7 +86,7 @@ a:hover {color: #f1532f;}
 			color: #555;
 		}
 		.legend i {
-			width: 18px;
+			width: 20px;
 			height: 18px;
 			float: left;
 			margin-right: 8px;
@@ -118,4 +121,22 @@ a:hover {color: #f1532f;}
 }
 body #header {
     background-color: white;
+}
+#content {
+    max-width: 1400px;
+}
+#explore-container {
+    min-height: 1200px;
+}
+
+#explore-controls div.bucket {
+    width: 350px;
+    float: left;
+    display: inline-block;
+}
+
+#explore-controls button {
+    margin: 0 auto;
+    clear: both;
+    display: block;
 }

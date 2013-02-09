@@ -1,0 +1,28 @@
+{% extends 'baser.html' %}
+
+{% block extratemplates %}
+  {% include 'must/explore_layout.html' %}
+  {% include 'must/explore_controls.html' %}
+  {% include 'must/explore_results.html' %}
+  {% include 'must/drug_select_item.html' %}
+  {% include 'must/map_placeholder.html' %}
+{% endblock %}
+
+{% block content %}
+  <h1>
+    Explore NHS Prescription data ratoios
+  </h1>
+
+  <div id="explore-container"></div>
+
+{% endblock %}
+
+{% block extrascripts %}
+  <script type="text/javascript" src="{{STATIC_URL}}js/data/ccg-data.js"></script>
+  <script src="{{STATIC_URL}}js/clients/explore.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+        Explore.start();
+    });
+  </script>
+{% endblock %}

@@ -67,11 +67,54 @@ class PrescriptionComparisonResource(ModelResource):
     def get_list(self, request, **kwargs):
         return self.create_response(request, self.apply_filters(request))
 
+class PrescriptionAggregatesResource(ModelResource):
+    """
+    Provide aggregation data on prescriptions of individual drugs
+    """
+    class Meta:
+        model = Prescription
+        queryset = Prescription.objects.all()
+        filtering = {
+            'bnf_code': ALL
+            }
+        # Custom documentation
+        custom_filtering = {
+                'query_type': {
+                    'dataType': 'string',
+                    'required': True,
+                    'description': 'Granularity of the data you want to retrieve'
+                    },
+                'bnf_code': {
+                    'dataType': 'string',
+                    'required': True,
+                    'description': 'BNF Code you are interested in'
+                    }
+                }
+        allowed_methods = ['get']
+
+
+    def apply_filters(self, request):
+        # TODO make query_type in to a override_url
+        if 'query_type' not in request.GET:
+            raise ValueError('Must tell us an aggregation level Larry!')
+        query_type = request.GET.get('query_type')
+        if query_type not in ['ccg', 'practice']:
+            raise ValueError('Query type must be one of ccg, practice')
+        if 'bnf_code' not in request.GET:
+            raise ValueError('Must provide us with a BNF code!')
+        bnf_code = request.GET.get('bnf_code')
+        meth = getattr(Prescription.objects, 'bnf_grouped_by_{0}_id'.format(query_type))
+        print meth, bnf_code
+        groups = meth([bnf_code])
+        aggs = {x['id']: x for x in groups}
+        return dict(objects=aggs)
+
+    def get_list(self, request, **kwargs):
+        return self.create_response(request, self.apply_filters(request))
+
+
 class GroupResource(ModelResource):
     class Meta:
             model = Group
             queryset = Group.objects.all()
             allowed_methods = ['get']
-
-
-

@@ -13,16 +13,34 @@
     Explore NHS Prescription data
   </h1>
 
-  <div id="explore-container"></div>
+  <h2>
+    O.K. - now what do I do?
+  </h2>
 
-{% endblock %}
+  <p>
+    We've built a few visualisation tools to help you ask interesting
+    questions about prescribing in the UK...
+  </p>
 
-{% block extrascripts %}
-  <script type="text/javascript" src="{{STATIC_URL}}js/data/ccg-data.js"></script>
-  <script src="{{STATIC_URL}}js/clients/explore.js"></script>
-  <script type="text/javascript">
-    jQuery(document).ready(function(){
-        Explore.start();
-    });
-  </script>
+  <div class="left span350">
+    <a href="{% url explorecompare %}">
+      <h3>Compare relationships</h3>
+    </a>
+    <p>
+      What does the breakdown of inhaler prescriptions with
+      HFC/Dry powder systems look like by CCG?
+    </p>
+    <p>
+      How much are we spending on branded statins vs generics?
+    </p>
+  </div>
+
+  <div class="left span350">
+    <a href="{% url exploredrug %}">
+      <h3>Explore individual drugs</h3>
+    </a>
+    <p>
+      How does prescribing of Salbutamol per capita vary by CCG?
+    </p>
+  </div>
 {% endblock %}

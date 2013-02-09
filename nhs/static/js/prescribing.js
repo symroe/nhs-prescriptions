@@ -78,7 +78,7 @@
         },
 
         initialize: function(identifier){
-            var map = L.map(identifier).setView([53.0, -1.5], 6);
+            var map = L.map(identifier).setView([53.0, -1.5], 7);
             var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
                 attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
                 key: 'BC9A493B41014CAABB98F0471D759707',
@@ -89,15 +89,26 @@
 
         // get color depending on the value we're heatmapping
         getColor: function(d) {
-            return d > 27  ? '#990000' :
-                d > 25  ? '#D7301F' :
-                d > 24  ? '#EF6548' :
-                d > 23  ? '#FC8D59' :
-                d > 22  ? '#FDBB84' :
-                d > 21  ? '#FDD49E' :
-                d > 19  ? '#FEE8C8' :
+            return d > 80  ? '#990000' :
+                d > 70  ? '#D7301F' :
+                d > 60  ? '#EF6548' :
+                d > 50  ? '#FC8D59' :
+                d > 40  ? '#FDBB84' :
+                d > 30  ? '#FDD49E' :
+                d > 20  ? '#FEE8C8' :
                 '#FFF7EC';
         },
+
+        // getColor: function(d) {
+        //     return d > 27  ? '#990000' :
+        //         d > 25  ? '#D7301F' :
+        //         d > 24  ? '#EF6548' :
+        //         d > 23  ? '#FC8D59' :
+        //         d > 22  ? '#FDBB84' :
+        //         d > 21  ? '#FDD49E' :
+        //         d > 19  ? '#FEE8C8' :
+        //         '#FFF7EC';
+        // },
 
         // Style of an individual layer
         style: function(feature) {
@@ -178,7 +189,8 @@
             var legend = L.control({position: 'bottomright'});
             legend.onAdd = function (map) {
                 var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 19, 21, 22, 23, 24, 25, 27, 35], // [0, 10, 20, 50, 100, 200, 500, 1000],
+                // grades = [0, 19, 21, 22, 23, 24, 25, 27, 35],
+                grades = [0, 20, 30, 40, 50, 60, 70, 80],
                 labels = [],
                 from, to;
 
@@ -222,6 +234,7 @@
     // Define our own generic collection
     ScripCollection = Backbone.Collection.extend({
 
+
         // Build this from the options hash
         url: function(){
             return App.config.api_uri() + this.resource + '/'
@@ -237,9 +250,11 @@
     });
 
     // Define our models
-    Practice = Backbone.Model.extend({});
-    Drug     = Backbone.Model.extend({});
-    Bucket   = Backbone.Model.extend({});
+    Practice     = Backbone.Model.extend({});
+    Drug         = Backbone.Model.extend({});
+    Ccg          = Backbone.Model.extend({});
+    Bucket       = Backbone.Model.extend({});
+    Prescription = Backbone.Model.extend({});
 
     // Define Collections
     Pharmacy = ScripCollection.extend({
@@ -247,25 +262,76 @@
         resource: 'product'
     });
 
+    // There is no good collective noun for buckets,
+    // but a "brigade of buckets" sounds pretty awesome...
     Brigade = ScripCollection.extend({
         model: Bucket,
         resource: 'prescriptioncomparison',
     });
 
+    // Container for CCG metadata
+    Ccgs = ScripCollection.extend({
+        model: Ccg,
+        resource: 'ccgmetadata'
+    });
+
+    PrescriptionAggs = ScripCollection.extend({
+        model: Prescription,
+        resource: 'prescriptionaggregates'
+    });
+
     // Views
     OPMap = Backbone.Marionette.ItemView.extend({
+
+        color_fun: null,
+
+        constructor: function(options){
+            var args = Array.prototype.slice.apply(arguments);
+            Marionette.ItemView.prototype.constructor.apply(this, args);
+        },
+
         template: function(serialised_model){
             var markup = "<center><div id=\"map\"><img src=\"https://s3-eu-west-1.amazonaws.com/prescribinganalytics/img/spinner.gif\" style='margin-top:20px;'></div></center>"
             return markup
-        }
-    });
-
-    BucketMap = OPMap.extend({
+        },
 
         initialize: function(opts){
-            this.collection = opts.collectoin;
+            // Store boolean fetched flags
+            this.dataflags = {
+                ccg: false
+            };
+
+            // Store references to our data containers
+            this.ccgs = new Ccgs({
+                limit: 0
+            });
+
+            // Set up event handlers
             this.on('show', this.render_map,  this);
-            opts.collection.on('reset', this.item_added, this);
+            this.ccgs.on('reset', this.got_ccgs_cb, this);
+
+            // Get the data we're not already asking for
+            this.ccgs.fetch({
+                data: {
+                    'limit': 0
+                }
+            });
+        },
+
+        // Are we ready to render yet?
+        ready: function(){
+            return _.every(
+                _.values(this.dataflags),
+                function(x){ return x === true });
+        },
+
+        // We've got the metadata - render if we're good to go
+        got_ccgs_cb: function(){
+            this.dataflags.ccg = true;
+            if(this.ready()){
+                this.heatmap_layers(this);
+            };
+            return;
         },
 
         // The View's markup has been rendered into the view, so
@@ -278,14 +344,98 @@
             this.map = map;
         },
 
+        // Fetching the Brigade just returned, so now we can add the CCG
+        // heatmap features.
+        heatmap_layers: function(view){
+            log.debug('BucketMap collection got items');
+            log.debug(view);
+            var feature_collection = view.make_features();
+            if(!this.color_fun){
+                style_fun = mapping.style;
+            }else{
+                getColor = this.color_fun;
+                style_fun = function(feature){
+                    var base = mapping.style(feature)
+                    base.fillColor = getColor(feature.properties.ccg_problem)
+                    return base;
+                }
+            }
+            var geoJSON = L.geoJson(
+                feature_collection,
+                {
+                    style: style_fun,
+                    onEachFeature: mapping.onEachFeature
+                }
+            );
+            geoJSON.addTo(view.map);
+            mapping.geojson = geoJSON;
+        },
+
+        // Figure out the heatmap colorings for this data range
+        make_color_fun: function(range){
+            var min = _.min(range), max = _.max(range);
+            var step = (max - min) / 8
+            var steps = []
+            var val = min;
+            for(i=0; i < 8; i++){
+                val += step
+                steps.push(val);
+            }
+            var colours = ['#990000',
+                           '#D7301F',
+                           '#EF6548',
+                           '#FC8D59',
+                           '#FDBB84',
+                           '#FDD49E',
+                           '#FEE8C8',
+                           '#FFF7EC']
+            var coloursteps = _.zip(steps, colours);
+
+            fn = function(d){
+                var pair = _.find(coloursteps, function(cs){ return cs[0] > d});
+                if(pair){
+                    return pair[1];
+                }else{
+                    return _.last(coloursteps)[1]
+                }
+            }
+            this.color_fun = fn;
+        }
+
+    });
+
+    BucketMap = OPMap.extend({
+
+        // Add extra setup to the Open Prescribing Map
+        initialize: function(opts){
+            // Do the standard setup
+            OPMap.prototype.initialize.call(this, opts);
+
+            // Add our bucket references
+            this.dataflags.buckets = false;
+            this.buckets = opts.buckets;
+            this.buckets.on('reset', this.got_buckets_cb, this);
+
+        },
+
+        // We've got the buckets - render if we're good to go
+        got_buckets_cb: function(){
+            this.dataflags.buckets = true;
+            if(this.ready()){
+                this.heatmap_layers(this);
+            };
+            return;
+        },
+
         // Given our buckets from the API. parse these into map Features,
         // matching them to our CCG geometry data
-        parse_buckets: function(ccgGeoms, brigade){
+        make_features: function(){
             log.debug('parsing Brigade');
             var fc = {
                 type: 'FeatureCollection'
             };
-            var brigade = brigade.models[0].attributes;
+            var brigade = this.buckets.models[0].attributes;
+            var ccgs = this.ccgs;
 
             // Loop through the Geometries, assigning characteristics
             features = _.map(
@@ -293,7 +443,15 @@
                 function(geometry){
                     var feature = new mapping.CCGFeature();
                     var ccg_code = geometry.ccg_code;
+                    var ccg = ccgs.where({code: ccg_code})[0];
+
                     feature.properties.ccg_code = ccg_code;
+                    feature.properties.Name = ccg.get('title');
+                    feature.properties.ccg_name = ccg.get('title');
+                    feature.properties.population = ccg.get('population');
+                    feature.properties.no_of_lsoas = ccg.get('lsoa_count');
+                    feature.properties.region = ccg.get('region');
+                    feature.properties.no_of_practices = ccg.get('no_of_practices');
                     feature.geometry = geometry.geometry;
 
                     var data = brigade[ccg_code] || null;
@@ -316,23 +474,84 @@
             return fc;
         },
 
-        // Fetching the Brigade just returned, so now we can add the CCG
-        // heatmap features.
-        item_added: function(brigade, view){
-            log.debug('BucketMap collection got items');
-            log.debug(brigade);
-            log.debug(view);
-            var feature_collection = this.parse_buckets(ccgGeoms, brigade);
-            var geoJSON = L.geoJson(
-                feature_collection,
-                {
-                    style: mapping.style,
-                    onEachFeature: mapping.onEachFeature
+    });
+
+    PerCapitaMap = OPMap.extend({
+
+        // Add extra setup for the percapita map
+        initialize: function(opts){
+            // Base class initialisatin
+            OPMap.prototype.initialize.call(this, opts);
+
+            // Add our data reference
+            this.collection = opts.collection;
+            this.dataflags.collection = true;
+            this.x = opts.x;
+            this.collection.on('reset', this.got_collection, this);
+        },
+
+        // Check for readiness having got our collection
+        got_collection: function(){
+            this.dataflags.collection = true;
+            if(this.ready()){
+                this.heatmap_layers(this)
+            }
+        },
+
+        // We've got our data, let's create the heatmap features
+        make_features: function(){
+            log.debug('making percapita features');
+            var fc = {
+                type: 'FeatureCollection'
+            };
+            var aggs = this.collection.models[0].attributes;
+            var ccgs = this.ccgs;
+
+            var percap = [];
+
+            // Loop through geometries, figuring out the per capita
+            // feature details for each one.
+            var features = _.map(
+                ccgGeoms.features,
+                function(geometry){
+                    var feature = new mapping.CCGFeature();
+                    var ccg_code = geometry.ccg_code;
+                    var ccg = ccgs.where({code: ccg_code})[0];
+
+                    feature.properties.ccg_code = ccg_code;
+                    feature.properties.Name = ccg.get('title');
+                    feature.properties.ccg_name = ccg.get('title');
+                    feature.properties.population = ccg.get('population');
+                    feature.properties.no_of_lsoas = ccg.get('lsoa_count');
+                    feature.properties.region = ccg.get('region');
+                    feature.properties.no_of_practices = ccg.get('no_of_practices');
+                    feature.geometry = geometry.geometry;
+
+                    var data = aggs[ccg_code] || null;
+
+                    // No prescriptions, no ratio to show
+                    if(!data){
+                        feature.properties.total_items_month = 0;
+                        feature.properties.ccg_problem = 0;
+                        return feature;
+                    }
+
+                    feature.properties.total_items_month = data.count;
+                    var scrips_per_capita = data.count/ccg.get('population');
+                    feature.properties.ccg_problem = scrips_per_capita;
+                    log.debug(scrips_per_capita)
+                    percap.push(scrips_per_capita)
+                    return feature
                 }
             );
-            geoJSON.addTo(this.map);
-            mapping.geojson = geoJSON;
+
+            this.make_color_fun(percap);
+
+            fc.features = features;
+            return fc;
         }
+
+
 
 
     });
@@ -347,6 +566,7 @@
             return pharmacy
         },
 
+        // Exercise the comparson API
         'prescriptioncomparison': function(opts){
             brigade = new Brigade();
             brigade.fetch({data: {
@@ -355,22 +575,52 @@
                 'group2': opts['group2'].join(','),
             }})
             return brigade
+        },
+
+        //Prescription aggregate API
+        'prescriptionaggregate': function(opts){
+            var scrips = new PrescriptionAggs();
+            scrips.fetch({
+                data: {
+                    'query_type': opts['query_type'] || 'ccg',
+                    'bnf_code':   opts.bnf_code
+                }
+            });
+            return scrips;
         }
+
     }
 
     // Api wrapper for producing Map views
     var Maps = {
 
+        // Return a view that displays the ratio of prescibing
+        // different buckets of drugs per CCG
         bucket: function(opts){
             var comparison = Api.prescriptioncomparison({
                 group1:  opts.bucket1 || [],
                 group2:  opts.bucket2 || []
             });
             var bucketmap = new BucketMap({
-                collection: comparison
+                buckets: comparison
             });
             return bucketmap;
         },
+
+        // Return a view that displays a map representing
+        // the number of prescriptions per capita
+        scrips_per_capita: function(opts){
+            var scrips = Api.prescriptionaggregate({
+                bnf_code: opts.bnf_code,
+                granularity: 'ccg'
+            });
+            var percapitamap = new PerCapitaMap({
+                collection: scrips,
+                x: 'total_items'
+            });
+            return percapitamap;
+        }
+
     };
 
     var GET = function(opts){
@@ -395,12 +645,3 @@
 
 
 })(this.window||exports, "Scrip")
-
-
-
-
-
-
-
-
-

@@ -15,3 +15,15 @@ class Ratio(TemplateView):
         context = super(Ratio, self).get_context_data(**kw)
         context['products'] = Product.objects.all()
         return context
+
+
+class ExploreDrug(TemplateView):
+    """
+    Explore drugs
+    """
+    template_name = 'explore_ratio.html'
+
+    def get_context_data(self, **kw):
+        context = super(ExploreDrug, self).get_context_data(**kw)
+        context['products'] = Product.objects.all()
+        return context

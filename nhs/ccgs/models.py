@@ -16,4 +16,3 @@ class CCG(geo_models.Model):
 
     def __unicode__(self):
         return "%s (%s)" % (self.pk, self.name)
-

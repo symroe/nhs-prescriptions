@@ -13,5 +13,5 @@ six==1.2.0
 wsgiref==0.1.2
 #-e git://github.com/mysociety/mapit.git#egg=mapit
 #-e git://github.com/minism/django-tastypie-swagger.git@d153f779b8898fe7fd449e5edaded4343adcd69f#egg=django_tastypie_swagger-dev
--e git://github.com/davidmiller/django-tastypie-swagger.git@d64e88edf3ef986f82745c4b162dab95bd38f955#egg=django_tastypie_swagger-dev
+-e git://github.com/davidmiller/django-tastypie-swagger.git#egg=django_tastypie_swagger-dev
 werkzeug==0.8.3
