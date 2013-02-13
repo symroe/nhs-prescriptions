@@ -3,6 +3,7 @@ Define the public API for prescriptions
 """
 from tastypie.resources import ModelResource, Resource
 from tastypie.constants import ALL, ALL_WITH_RELATIONS
+from tastypie.cache import SimpleCache
 
 from models import Product, Prescription, Group
 
@@ -21,6 +22,7 @@ class PrescriptionResource(ModelResource):
             model = Prescription
             queryset = Prescription.objects.all()
             allowed_methods = ['get']
+            cache = SimpleCache(timeout=1000)
 
 class PrescriptionComparisonResource(ModelResource):
     class Meta:

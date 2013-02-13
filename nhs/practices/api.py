@@ -1,4 +1,8 @@
+"""
+API for GP practices
+"""
 from tastypie import fields
+from tastypie.cache import SimpleCache
 from tastypie.contrib.gis.resources import ModelResource as GeoModelResource
 
 from models import Practice
@@ -10,9 +14,8 @@ class MapitPostCodeResource(GeoModelResource):
 
 class PracticeResource(GeoModelResource):
     pc = fields.ToOneField(MapitPostCodeResource, 'pc', null=True)
-    
+
     class Meta:
-            model = Practice
-            queryset = Practice.objects.all()
-
-
+        model = Practice
+        queryset = Practice.objects.all()
+        cache = SimpleCache(timeout=10)
