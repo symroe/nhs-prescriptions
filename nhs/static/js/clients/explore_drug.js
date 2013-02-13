@@ -37,7 +37,8 @@
         },
 
         events: {
-            'click button': 'resultise'
+            'click button': 'resultise',
+            'keyup #filter': 'filter'
         },
 
         // Show the results
@@ -49,6 +50,14 @@
             });
             log.debug(mapview);
             ExploreDrugApp.trigger('results:new_view', mapview);
+        },
+
+        // Filter the visible drugs
+        filter: function(event){
+            log.debug('filtering')
+            var val = this.$('#filter').attr('value');
+            log.debug(val);
+            this.drugs.currentView.filter(val);
         }
 
     })
@@ -67,9 +76,9 @@
 
     })
 
-    var DrugOptionView = Backbone.Marionette.ItemView.extend({
+    var DrugListItemView = Backbone.Marionette.ItemView.extend({
         template: '#drug-option-template',
-        tagName: 'option',
+        tagName: 'li',
         onRender: function(){
             this.$el.attr('value', this.model.get('bnf_code'));
             return
@@ -77,8 +86,21 @@
     });
 
     var DrugSelectView = Backbone.Marionette.CollectionView.extend({
-        itemView: DrugOptionView,
-        tagName: 'select'
+        itemView: DrugListItemView,
+        tagName: 'ul',
+
+        // We'd like to hide any drugs that don't match VAL
+        filter: function(val){
+            log.debug(val);
+            var matches = _(this.collection.search(val)).pluck('cid');
+            this.$('li').toggle(false);
+
+            _.each(
+                matches, function(x){
+                    this.children._views[this.children._indexByModel[x]].$el.toggle(true);
+                },
+                this);
+        }
     });
 
     var ExploreDrugApp = context[namespace] = new Backbone.Marionette.Application();
@@ -98,7 +120,8 @@
         ExploreDrugApp.on('results:new_view', results.new_result, results);
 
         all_drugs = OP.get({
-            resource: 'product'
+            resource: 'product',
+            data: { limit: 0 }
         })
 
         drugs = new DrugSelectView({

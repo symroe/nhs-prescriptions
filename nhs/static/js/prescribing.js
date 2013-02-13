@@ -211,6 +211,11 @@
         }
     }
 
+    // Namespacing external services
+    var services = {
+
+    };
+
     // Let's have an application object to hang off from
     var App = new Backbone.Marionette.Application();
 
@@ -245,6 +250,16 @@
             log.debug("API response");
             log.debug(response);
             return response.objects || response;
+        },
+
+        // Filter the collection for names matching LETTERS
+        search: function(letters){
+            if(letters == "") return this;
+
+	    var pattern = new RegExp(letters,"gi");
+	    return this.filter(function(data) {
+		return pattern.test(data.get("name"));
+	    });
         }
 
     });
@@ -551,23 +566,21 @@
             return fc;
         }
 
-
-
-
     });
 
     // GET Api calls
 
     var Api = {
 
-        'product': function(opts){
+        product: function(opts){
             pharmacy = new Pharmacy();
-            pharmacy.fetch();
+            data = opts.data || {}
+            pharmacy.fetch({data: data});
             return pharmacy
         },
 
         // Exercise the comparson API
-        'prescriptioncomparison': function(opts){
+        prescriptioncomparison: function(opts){
             brigade = new Brigade();
             brigade.fetch({data: {
                 'query_type': opts['query_type'] || 'ccg',
@@ -578,7 +591,7 @@
         },
 
         //Prescription aggregate API
-        'prescriptionaggregate': function(opts){
+        prescriptionaggregate: function(opts){
             var scrips = new PrescriptionAggs();
             scrips.fetch({
                 data: {
