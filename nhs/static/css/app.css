@@ -63,8 +63,8 @@ a:hover {color: #f1532f;}
 }
 
 #map {
-			width: 1200px;
-			height: 700px;
+			width: 960px;
+			height: 600px;
 		}
 
 .info {
@@ -139,4 +139,22 @@ body #header {
     margin: 0 auto;
     clear: both;
     display: block;
+}
+#drugs ul {
+    margin: 3px;
+    width: 340px;
+    height: 200px;
+    overflow-y: scroll;
+}
+#drugs li {
+    list-style-type: none;
+    border: 1px solid red;
+    width: 300px;
+    margin: 0px;
+    padding: 3px;
+}
+#drugs li:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
 }

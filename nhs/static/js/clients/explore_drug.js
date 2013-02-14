@@ -79,6 +79,20 @@
     var DrugListItemView = Backbone.Marionette.ItemView.extend({
         template: '#drug-option-template',
         tagName: 'li',
+        events: {
+            'click': 'resultise'
+        },
+
+        resultise: function(event){
+            log.debug('Make Heatmap!');
+            var bnf_code = this.model.get('bnf_code');
+            var mapview = OP.maps.scrips_per_capita({
+                bnf_code: bnf_code
+            });
+            log.debug(mapview);
+            ExploreDrugApp.trigger('results:new_view', mapview);
+        },
+
         onRender: function(){
             this.$el.attr('value', this.model.get('bnf_code'));
             return
